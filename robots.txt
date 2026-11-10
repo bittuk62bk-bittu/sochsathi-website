@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bittuk62bk-bittu.github.io/sochsathi-website/sitemap.xml
