@@ -289,6 +289,26 @@
         font-size: 27px;
       }
     }
+
+    /* SochSathi interactive learning features */
+    .tool-panel{background:#121212;border:1px solid #49391e;border-radius:14px;padding:24px;margin:28px 0}
+    .tool-panel h3{color:#e6bd67;font-size:22px;margin-bottom:10px}
+    .tool-panel p{color:#bbb}
+    .search-row{display:flex;gap:10px;max-width:680px;margin:18px auto 10px}
+    .search-row input{flex:1;min-width:0;background:#080808;border:1px solid #8b6b2e;color:#fff;border-radius:7px;padding:13px;font-size:16px}
+    .search-count{color:#aaa;text-align:center;font-size:13px;margin:8px}
+    .quiz-question{border-top:1px solid #3b3020;padding:18px 0}
+    .quiz-question strong{display:block;margin-bottom:10px;color:#eee}
+    .quiz-option{display:block;width:100%;text-align:left;margin:7px 0;padding:11px 13px;background:#1b1b1b;border:1px solid #514024;color:#eee;border-radius:7px;cursor:pointer}
+    .quiz-option:hover,.quiz-option.selected{border-color:#e6bd67;background:#2a2113}
+    .quiz-feedback{font-size:14px;color:#e6bd67;margin-top:8px;min-height:20px}
+    .faq-item{border-top:1px solid #49391e;padding:14px 0}
+    .faq-item summary{cursor:pointer;color:#e6bd67;font-weight:bold}
+    .faq-item p{color:#bbb;padding:10px 0 0}
+    .tool-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:15px}
+    .tool-actions button{background:#d6ad58;color:#111;border:0;border-radius:6px;padding:11px 18px;font-weight:bold;cursor:pointer}
+    @media(max-width:600px){.search-row{flex-direction:column}.tool-panel{padding:17px}}
+
   </style>
 </head>
 
@@ -607,6 +627,54 @@
       </div>
     </section>
 
+    <section class="dark-section" id="quiz">
+      <div class="container">
+        <h2 class="section-title">SOCHSATHI <span class="gold">SAFETY QUIZ</span></h2>
+        <p class="section-intro">5 chhote scenarios se apni online safety awareness check karein. Ye learning quiz hai, certification ya security test nahi.</p>
+        <div class="tool-panel" id="safetyQuiz">
+          <div id="quizQuestions"></div>
+          <div class="tool-actions"><button type="button" id="quizSubmit">Mera Score Dekhein</button><button type="button" id="quizReset">Dobara Shuru Karein</button></div>
+          <p id="quizResult" class="message" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="related-guides">
+      <div class="container">
+        <h2 class="section-title">Saare <span class="gold">Scam Guides</span></h2>
+        <p class="section-intro">Kisi ek topic ko detail mein samajhne ke liye guide kholein.</p>
+        <div class="cards">
+          <a class="card card-link" href="colour-prediction.html"><h3>Colour Prediction</h3><p>Game model, probability aur risk.</p></a>
+          <a class="card card-link" href="binary-trading.html"><h3>Binary Trading</h3><p>Payout structure aur trading risks.</p></a>
+          <a class="card card-link" href="cricket-betting.html"><h3>Cricket Betting</h3><p>Odds, commissions aur behaviour.</p></a>
+          <a class="card card-link" href="vip-signal-groups.html"><h3>VIP Signal Groups</h3><p>Paid tips aur profit claims.</p></a>
+          <a class="card card-link" href="digital-arrest.html"><h3>Digital Arrest</h3><p>Fake officer calls aur threats.</p></a>
+          <a class="card card-link" href="fake-links.html"><h3>Fake Links & Websites</h3><p>Phishing aur look-alike pages.</p></a>
+          <a class="card card-link" href="job-scams.html"><h3>Job Scams</h3><p>Fake recruitment aur task fraud.</p></a>
+          <a class="card card-link" href="upi-payment-fraud.html"><h3>UPI & Payment Fraud</h3><p>Collect requests aur payment tricks.</p></a>
+          <a class="card card-link" href="social-media-impersonation.html"><h3>Social Media Impersonation</h3><p>Fake profiles aur account misuse.</p></a>
+          <a class="card card-link" href="sextortion-blackmail.html"><h3>Sextortion & Blackmail</h3><p>Threats aur evidence safety.</p></a>
+          <a class="card card-link" href="loan-investment-scams.html"><h3>Loan & Investment Scams</h3><p>Advance fee aur fake returns.</p></a>
+          <a class="card card-link" href="lottery-prize-courier.html"><h3>Lottery & Courier Fraud</h3><p>Fake prize aur parcel demands.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Common <span class="gold">Questions</span></h2>
+        <p class="section-intro">SochSathi aur online safety se jude aam sawaalon ke seedhe jawaab.</p>
+        <div class="tool-panel">
+          <details class="faq-item"><summary>Kya SochSathi kisi platform ko bina proof scam declare karta hai?</summary><p>Nahi. Hum available evidence, public sources aur risk indicators ko alag rakhte hain. Har allegation ko verified fact nahi maana jata.</p></details>
+          <details class="faq-item"><summary>Kya TRUST CHECK AI ka result 100% sahi hota hai?</summary><p>Nahi. AI galti kar sakta hai. Iska analysis ek initial safety aid hai; important decisions se pehle official aur independent sources se verify karein.</p></details>
+          <details class="faq-item"><summary>Agar online paise ka fraud ho gaya to pehle kya karein?</summary><p>Turant 1930 par call karein, cybercrime.gov.in par report karein aur apne bank/payment provider ko inform karein. Transaction IDs aur screenshots sambhal kar rakhein.</p></details>
+          <details class="faq-item"><summary>Kya OTP, UPI PIN ya password TRUST CHECK AI ko bhejna chahiye?</summary><p>Kabhi nahi. OTP, password, UPI PIN, CVV ya full card details kisi ko bhi share na karein—AI bot ko bhi nahi.</p></details>
+          <details class="faq-item"><summary>Kya reported cyber-fraud amount ka matlab utna paisa confirm chori hua?</summary><p>Reported amount, confirmed loss, frozen amount aur refunded amount alag metrics hain. Har figure ke saath uska source aur period dekhna zaroori hai.</p></details>
+          <details class="faq-item"><summary>SochSathi ki information kaise verify karun?</summary><p>Har research topic par diye gaye original sources aur official portals ko khud check karein. Data ki reporting date aur limitations bhi padhein.</p></details>
+        </div>
+      </div>
+    </section>
+
     <section class="dark-section" id="safety">
       <div class="container">
 
@@ -791,6 +859,60 @@
 
     </div>
   </footer>
+
+
+<script>
+(function(){
+  const input=document.getElementById('guideSearch');
+  const grid=document.getElementById('researchCards');
+  const count=document.getElementById('searchCount');
+  if(input&&grid){
+    const cards=Array.from(grid.querySelectorAll(':scope > .card'));
+    input.addEventListener('input',function(){
+      const q=this.value.trim().toLocaleLowerCase();
+      let shown=0;
+      cards.forEach(card=>{
+        const match=card.textContent.toLocaleLowerCase().includes(q);
+        card.hidden=!match;
+        if(match) shown++;
+      });
+      count.textContent=shown+' of '+cards.length+' topics shown';
+    });
+  }
+  const quizData=[
+    {q:'Unknown person says: “Aapka bank account block hoga, OTP batao.” Kya karein?',a:['OTP share kar dein','Call/message ignore karke bank ke official number se verify karein','Unke bheje link par login karein'],correct:1,why:'Bank ya genuine support ko OTP batane ki zaroorat nahi hoti. Official channel se khud contact karein.'},
+    {q:'Koi online task ke liye pehle ₹2,000 deposit maangta hai aur guaranteed return bolta hai.',a:['Pehle chhota deposit bhejein','Doston se udhaar lekar bhejein','Payment rok kar offer aur company independently verify karein'],correct:2,why:'Advance deposit + guaranteed earning ek strong warning sign hai.'},
+    {q:'Koi QR code bhejkar kehta hai scan karo aur paise receive honge.',a:['Yaad rakhein: QR scan/UPI PIN enter karna payment authorize kar sakta hai','Turant scan karein','UPI PIN message mein bhejein'],correct:0,why:'Paise receive karne ke liye aam taur par UPI PIN enter nahi karna hota.'},
+    {q:'Video call par koi police officer bankar arrest ki dhamki deta hai aur paise transfer bolta hai.',a:['Darr kar transfer karein','Call disconnect karein, paise na bhejein aur official agency se independently verify karein','Apna Aadhaar/OTP bhejein'],correct:1,why:'Digital arrest ke naam par video call par dhamki aur payment demand ek known fraud pattern hai.'},
+    {q:'Aapke account se paise fraudulently nikal gaye. Sabse pehla practical step?',a:['24 ghante wait karein','Evidence delete karein','1930 par turant call karein, cybercrime.gov.in par report karein aur bank ko inform karein'],correct:2,why:'Fast reporting se transaction ko hold/freeze karne ka mauka mil sakta hai; refund ki guarantee nahi hoti.'}
+  ];
+  const host=document.getElementById('quizQuestions');
+  const result=document.getElementById('quizResult');
+  if(!host)return;
+  let answers=Array(quizData.length).fill(-1);
+  function render(){
+    host.innerHTML='';
+    quizData.forEach((item,i)=>{
+      const wrap=document.createElement('div');wrap.className='quiz-question';
+      const title=document.createElement('strong');title.textContent=(i+1)+'. '+item.q;wrap.appendChild(title);
+      item.a.forEach((option,j)=>{
+        const b=document.createElement('button');b.type='button';b.className='quiz-option'+(answers[i]===j?' selected':'');b.textContent=option;b.setAttribute('aria-pressed',answers[i]===j?'true':'false');
+        b.addEventListener('click',()=>{answers[i]=j;render();});wrap.appendChild(b);
+      });
+      host.appendChild(wrap);
+    });
+  }
+  document.getElementById('quizSubmit').addEventListener('click',()=>{
+    const done=answers.filter(x=>x!==-1).length;
+    if(done!==quizData.length){result.textContent='Pehle sabhi 5 sawaalon ke jawaab select karein.';return;}
+    let score=0;answers.forEach((a,i)=>{if(a===quizData[i].correct)score++;});
+    result.textContent='Aapka score: '+score+'/5. '+(score===5?'Shabash! Aapne sabhi scenarios sahi samjhe.':score>=3?'Achhi koshish! Neeche diye gaye explanations ko dobara padhein.':'Koi baat nahi—har scenario par sochkar dobara try karein.');
+    quizData.forEach((item,i)=>{const p=document.createElement('p');p.className='quiz-feedback';p.textContent=(i+1)+'. '+(answers[i]===item.correct?'Sahi. ':'Review. ')+item.why;host.appendChild(p);});
+  });
+  document.getElementById('quizReset').addEventListener('click',()=>{answers=Array(quizData.length).fill(-1);result.textContent='';render();});
+  render();
+})();
+</script>
 
 </body>
 </html>
