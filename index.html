@@ -2,125 +2,543 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SochSathi | Parde Ke Peeche Ki Sachchai</title>
-<meta name="description" content="SochSathi par samjhiye online games, scams, trading aur digital duniya ke peeche ki sachchai.">
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:#090b12;color:#f5f5f5;line-height:1.7}
-header{padding:20px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #292b35}
-.logo{font-size:25px;font-weight:bold;color:#e9bd65}
-nav a{color:#ddd;text-decoration:none;margin-left:18px;font-size:14px}
-.hero{text-align:center;padding:90px 20px 75px;background:radial-gradient(circle at center,#25202b,#090b12 70%)}
-.tag{color:#e9bd65;letter-spacing:3px;font-size:13px}
-h1{font-size:48px;line-height:1.2;margin:20px auto;max-width:850px}
-h1 span{color:#e9bd65}
-.hero p{color:#c2c2c9;max-width:650px;margin:15px auto}
-.btn{display:inline-block;background:#e9bd65;color:#111;padding:12px 24px;border-radius:6px;text-decoration:none;font-weight:bold;margin:20px 8px}
-.btn2{border:1px solid #e9bd65;color:#e9bd65;padding:12px 24px;border-radius:6px;text-decoration:none;display:inline-block}
-section{padding:65px 8%;text-align:center}
-h2{font-size:30px;margin-bottom:12px}
-.sub{color:#aaa;margin-bottom:35px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;text-align:left}
-.card{background:#151823;border:1px solid #303341;padding:25px;border-radius:12px}
-.card h3{color:#e9bd65;margin-bottom:10px}
-.card p{color:#bbb;font-size:14px}
-.about{background:#11141e}
-.ai{background:#191824}
-footer{text-align:center;padding:30px 15px;border-top:1px solid #292b35;color:#aaa;font-size:13px}
-footer strong{color:#e9bd65}
-@media(max-width:650px){
-header{flex-direction:column;gap:12px}
-nav a{margin:0 7px;font-size:12px}
-h1{font-size:34px}
-section{padding:48px 6%}
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SochSathi – Parde Ke Peeche Ki Sachchai</title>
+
+  <meta name="description" content="SochSathi par online games, trading, betting aur digital scams ke peeche ka business model, psychology aur sachchai samjhiye.">
+
+  <meta name="theme-color" content="#090909">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #090909;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background: #111;
+      border-bottom: 1px solid #8b6b2e;
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: #e6bd67;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #e6bd67;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 0 75px;
+      background: radial-gradient(circle at top, #292013, #090909 65%);
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 15px;
+      margin: 0 auto 25px;
+      display: block;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #e6bd67;
+      border: 1px solid #8b6b2e;
+      border-radius: 30px;
+      padding: 7px 17px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 7vw, 62px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    h1 span,
+    .gold {
+      color: #e6bd67;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      margin: auto;
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    .message {
+      color: #e6bd67;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d6ad58;
+      color: #111;
+      padding: 13px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 25px 8px 0;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f2d48f;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #e6bd67;
+      border: 1px solid #d6ad58;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      color: #aaa;
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #302719;
+      border-radius: 12px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      border-color: #d6ad58;
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #e6bd67;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #bbb;
+      font-size: 15px;
+    }
+
+    .dark-section {
+      background: #111;
+    }
+
+    .highlight {
+      text-align: center;
+      background: linear-gradient(135deg, #211a0e, #111);
+      border: 1px solid #8b6b2e;
+      border-radius: 15px;
+      padding: 40px 25px;
+    }
+
+    .highlight h2 {
+      color: #e6bd67;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .highlight p {
+      color: #ccc;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .note {
+      color: #999;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #050505;
+      border-top: 1px solid #49391e;
+      padding: 35px 0;
+      text-align: center;
+    }
+
+    footer h2 {
+      color: #e6bd67;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #999;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 45px 0 55px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header>
-<div class="logo">SOCHSATHI</div>
-<nav>
-<a href="#home">Home</a>
-<a href="research.html">Research</a>
-<a href="#safety">Safety</a>
-<a href="#about">About</a>
-</nav>
-</header>
+  <header>
+    <div class="container nav">
+      <div class="brand">SOCHSATHI</div>
 
-<div class="hero" id="home">
-<img src="./sochsathi-logo.png.png"
-alt="SochSathi Logo"
-style="width:100%;max-width:650px;border-radius:15px;margin:20px auto;display:block;">
-<div class="tag">SOCHO • SAMJHO • SURAKSHIT RAHO</div>
-<h1>Parde Ke Peeche Ki <span>Sachchai</span></h1>
-<p>Online games, trading, betting aur digital scams ke peeche ka business model samjhiye. Sawaal poochhiye, jaankari parakhiye aur apne faisle khud lijiye.</p>
-<p>Aapka Dimaag Aapka Hai… Kisi Aur Ke Ishare Par Mat Nacho.</p>
-<a class="btn" href="#research">Sachchai Jaaniye</a>
-<a class="btn2" href="https://t.me/SmartDostIndiaBot">TRUST CHECK AI</a>
-</div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#research">Research</a>
+        <a href="#safety">Safety</a>
+        <a href="#ai">AI Assistant</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
 
-<section id="research">
-<h2>GAME KE PICHE KA GAME</h2>
-<p class="sub">Jo screen par dikhta hai, zaroori nahi ki poori sachchai wahi ho.</p>
-<div class="cards">
-<div class="card">
-<h3>Colour Prediction Games</h3>
-<p>Game kaise kaam karta hai? Payout, probability aur platform ke business model ko samjhiye.</p>
-</div>
-<div class="card">
-<h3>Binary Trading</h3>
-<p>Risk, trading signals, platform incentives aur online claims ko samajhne ki koshish.</p>
-</div>
-<div class="card">
-<h3>Cricket Betting</h3>
-<p>Odds, betting systems aur paisa lagane ke risks ke baare mein jaankari.</p>
-<div class="card">
-<h3>Binary Trading: Profit Ka Khel Ya Risk Ka Business?</h3>
-<p>Binary trading ka mathematics, payout system, VIP signals aur platform ke business model ko samjhiye.</p>
-<a class="btn" href="research.html">Puri Research Padhein</a>
-</div>
-<h3>VIP Groups & Fake Proof</h3>
-<p>Fake profit screenshots, referral incentives aur misleading promises ko pehchaniye.</p>
-</div>
-</div>
-</section>
+  <main>
 
-<section class="about" id="safety">
-<h2>ONLINE SAFETY</h2>
-<p class="sub">Kisi bhi link, message ya online offer par bharosa karne se pehle jaanch zaroor karein.</p>
-<div class="cards">
-<div class="card">
-<h3>Scam Awareness</h3>
-<p>Common online fraud ke tareeke aur unse bachne ki jaankari.</p>
-</div>
-<div class="card">
-<h3>TRUST CHECK AI</h3>
-<p>Suspicious links, messages aur screenshots ka preliminary AI-based risk analysis paaiye.</p>
-<a class="btn" href="https://t.me/SmartDostIndiaBot">Telegram Bot Kholein</a>
-</div>
-</div>
-</section>
+    <section class="hero" id="home">
+      <div class="container">
 
-<section class="ai">
-<h2>SOCHSATHI ACADEMY</h2>
-<p class="sub">Digital duniya ko samajhne ke liye learning platform.</p>
-<p>Research-based lessons, practical examples aur awareness courses jald aayenge.</p>
-</section>
+        <img
+          src="./sochsathi-logo.png.png"
+          alt="SochSathi Original Logo"
+          class="logo"
+        >
 
-<section id="about">
-<h2>HAMARA MAQSAD</h2>
-<p class="sub">Humara maksad dar phailana nahi, balki logon ko jaankari dekar samajhdaar faisle lene mein madad karna hai.</p>
-<p>Har claim ko samajhiye, evidence dekhiye aur apna dimag apne control mein rakhiye.</p>
-</section>
+        <div class="tag">SOCHO • SAMJHO • SURAKSHIT RAHO</div>
 
-<footer>
-<p><strong>SOCHSATHI</strong> — Apna Dimag, Apna Control.</p>
-<p>Created & Managed by Bittu Khan</p>
-<p>Educational awareness platform. Information is not financial or legal advice.</p>
-</footer>
+        <h1>
+          Parde Ke Peeche Ki
+          <span>Sachchai</span>
+        </h1>
+
+        <p class="hero-text">
+          Online games, trading, betting aur digital scams ke peeche
+          ka business model samjhiye. Sawaal poochhiye, jaankari
+          parakhiye aur apne faisle khud lijiye.
+        </p>
+
+        <p class="message">
+          Aapka Dimaag Aapka Hai… Kisi Aur Ke Ishare Par Mat Nacho.
+        </p>
+
+        <a href="#research" class="btn">Sachchai Jaaniye</a>
+
+        <a href="https://t.me/SmartDostIndiaBot"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-outline">
+          TRUST CHECK AI
+        </a>
+
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+
+        <h2 class="section-title">
+          <span class="gold">GAME KE PICHE KA GAME</span>
+        </h2>
+
+        <p class="section-intro">
+          Sirf screen par jo dikh raha hai wahi poori kahani nahi hoti.
+          Hum samjhenge ki in platforms ka business model kaise kaam karta hai.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>Colour Prediction</h3>
+            <p>
+              Colour prediction platforms kaise kaam karte hain?
+              Game rules, probability, incentives aur risk ko samjhiye.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Binary Trading</h3>
+            <p>
+              Binary options, payout structure, risk aur online
+              trading promotions ke peeche ki sachchai samjhiye.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Cricket Betting</h3>
+            <p>
+              Betting platforms, odds, commissions aur user behaviour
+              ke business model ko samjhiye.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>VIP Signal Groups</h3>
+            <p>
+              Fake profit screenshots, paid tips, referral income
+              aur guaranteed profit claims ko parakhiye.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Digital Scams</h3>
+            <p>
+              Fake websites, suspicious links, impersonation aur
+              online fraud ke common tareeqon ko samjhiye.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Psychology & Manipulation</h3>
+            <p>
+              Urgency, greed, fear of missing out aur reward systems
+              insaan ke faislon ko kaise influence karte hain?
+            </p>
+          </div>
+
+        </div>
+
+        <p class="note">
+          Har platform ya service ko bina saboot scam nahi kaha jayega.
+          Hum facts, available evidence aur risk ko alag-alag samjhenge.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="dark-section" id="safety">
+      <div class="container">
+
+        <h2 class="section-title">
+          Online Rahiye, <span class="gold">Hoshiyar Rahiye</span>
+        </h2>
+
+        <p class="section-intro">
+          Kisi bhi online offer, message, link ya earning claim par
+          bharosa karne se pehle uski jaanch zaroor karein.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>1. Claim Par Sawaal Karein</h3>
+            <p>
+              Guaranteed profit, double money aur instant income
+              jaise claims ko bina jaanch accept na karein.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>2. Evidence Check Karein</h3>
+            <p>
+              Screenshots aur testimonials ke alawa independent
+              sources aur official information bhi dekhein.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>3. Personal Data Bachayein</h3>
+            <p>
+              OTP, password, UPI PIN, CVV ya sensitive personal
+              information kisi ke saath share na karein.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="ai">
+      <div class="container">
+
+        <div class="highlight">
+
+          <h2>TRUST CHECK AI</h2>
+
+          <p>
+            Koi suspicious message, link ya online offer mila hai?
+            TRUST CHECK AI se uski basic risk analysis samajhne
+            mein madad lijiye.
+          </p>
+
+          <a href="https://t.me/SmartDostIndiaBot"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn">
+            Telegram Bot Kholein
+          </a>
+
+          <p class="note">
+            AI analysis ek madadgaar tool hai, 100% guarantee nahi.
+            Zaroori faisle karne se pehle independent verification karein.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="dark-section" id="academy">
+      <div class="container">
+
+        <h2 class="section-title">
+          SOCHSATHI <span class="gold">ACADEMY</span>
+        </h2>
+
+        <p class="section-intro">
+          Digital awareness, online safety, business models aur
+          financial risk ko aasaan bhaasha mein samajhne ka ek learning platform.
+        </p>
+
+        <div class="highlight">
+          <h2>Seekhiye. Samajhiye. Sawaal Kijiye.</h2>
+          <p>
+            SochSathi Academy ka educational content aur learning
+            resources dheere-dheere yahan launch kiye jayenge.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+
+        <h2 class="section-title">SochSathi Ke Baare Mein</h2>
+
+        <p class="section-intro">
+          SochSathi ka maqsad logon ko online duniya ke business
+          models, psychology, incentives, risks aur digital manipulation
+          ko samajhne mein madad dena hai.
+          Hamara focus awareness aur evidence-based education par hai.
+        </p>
+
+        <div class="highlight">
+          <h2>Parde Ke Peeche Ki Sachchai</h2>
+          <p>
+            Hum aapke liye faisle nahi karte.
+            Hum aapko sawaal poochhne aur apne faisle khud lene
+            ke liye jaankari dete hain.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <h2>SOCHSATHI</h2>
+
+      <p>Parde Ke Peeche Ki Sachchai</p>
+
+      <p>Socho • Samjho • Surakshit Raho</p>
+
+      <p>
+        Created &amp; Managed by<br>
+        <strong>PATHAN TASLIMKHAN NABIALAMKHAN (Bittu Khan)</strong>
+      </p>
+
+      <p>© 2026 SochSathi. All Rights Reserved.</p>
+
+    </div>
+  </footer>
 
 </body>
 </html>
