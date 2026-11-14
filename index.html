@@ -309,7 +309,25 @@
     .tool-actions button{background:#d6ad58;color:#111;border:0;border-radius:6px;padding:11px 18px;font-weight:bold;cursor:pointer}
     @media(max-width:600px){.search-row{flex-direction:column}.tool-panel{padding:17px}}
 
-  </style>
+
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#302313 0,#111 48%,#080808 100%)}
+    .hero-showcase{height:250px;max-width:680px;margin:0 auto 25px;position:relative;display:grid;place-items:center;overflow:hidden;border:1px solid #594321;border-radius:22px;background:linear-gradient(120deg,rgba(230,189,103,.10),rgba(17,24,39,.75),rgba(230,189,103,.08));}
+    .hero-showcase:before{content:"";position:absolute;inset:-50%;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.09) 50%,transparent 60%);animation:shine 7s linear infinite}
+    .showcase-center{z-index:1;display:flex;flex-direction:column;align-items:center;gap:5px;color:#e6bd67}
+    .showcase-center span{font-size:62px;filter:drop-shadow(0 0 18px #b78a3b)}
+    .showcase-center strong{font-size:26px;letter-spacing:4px}
+    .showcase-center small{font-size:10px;letter-spacing:2px;color:#eee}
+    .showcase-orbit{position:absolute;width:210px;height:210px;border:1px solid rgba(230,189,103,.24);border-radius:50%;animation:orbit 16s linear infinite}
+    .orbit-two{width:300px;height:300px;animation-direction:reverse}
+    .float-chip{position:absolute;z-index:2;background:#171717;border:1px solid #8b6b2e;border-radius:30px;padding:9px 13px;font-size:13px;box-shadow:0 8px 25px #0008}
+    .chip-one{top:25px;left:5%}.chip-two{right:5%;top:45px}.chip-three{bottom:22px;left:50%;transform:translateX(-50%)}
+    @keyframes shine{to{transform:translateX(50%)}}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    .quick-start{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:25px auto;max-width:900px}
+    .quick-start a{background:#171717;border:1px solid #49391e;border-radius:12px;padding:16px;text-align:left}
+    .quick-start b{display:block;color:#e6bd67;font-size:17px}.quick-start span{font-size:13px;color:#ccc}
+    @media(max-width:600px){.hero-showcase{height:220px}.float-chip{font-size:11px;padding:7px 9px}.chip-one{left:2%}.chip-two{right:2%}}
+\n  </style>
 </head>
 
 <body>
@@ -320,18 +338,59 @@
 
       <nav>
         <a href="#home">Home</a>
-        <a href="#india-tracker">India Tracker</a>
-        <a href="#research">Research</a>
         <a href="#safety">Safety</a>
-        <a href="#ai">AI Assistant</a>
-        <a href="#academy">Academy</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
+        <a href="#ai">AI Check</a>
+        <a href="#research">Scam Guides</a>
+        <a href="#india-tracker">India Data</a>
       </nav>
     </div>
   </header>
 
   <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+
+        <div class="hero-showcase" aria-label="Online safety visual">
+          <div class="showcase-orbit orbit-one"></div><div class="showcase-orbit orbit-two"></div>
+          <div class="showcase-center"><span>🛡️</span><strong>SOCHSATHI</strong><small>PEHLE JAANCHO • PHIR BHAROSA KARO</small></div>
+          <div class="float-chip chip-one">📩 Fake Message?</div><div class="float-chip chip-two">🔗 Suspicious Link?</div><div class="float-chip chip-three">💸 Payment Demand?</div>
+        </div>
+        <img
+          src="./sochsathi-logo.png.png"
+          alt="SochSathi Original Logo"
+          class="logo"
+        >
+
+        <div class="tag">SOCHO • SAMJHO • SURAKSHIT RAHO</div>
+
+        <h1>
+          Online Duniya Ko
+          <span>Aasaan Bhasha Mein Samjho</span>
+        </h1>
+
+        <p class="hero-text">
+          Koi link, message, job offer ya online earning scheme samajh nahi aa rahi? Yahan simple examples se jaaniye kya safe hai aur kis baat se savdhaan rehna hai.
+        </p>
+
+        <p class="message">
+          Koi bhi online payment karne se pehle ek baar rukkar jaanch zaroor karein.
+        </p>
+
+        <a href="#safety" class="btn">Fraud Pehchanna Seekhein</a>
+
+        <a href="https://t.me/SmartDostIndiaBot" target="_blank" rel="noopener noreferrer" class="btn btn-outline">FREE AI SE CHECK KAREIN</a>
+
+        <div class="quick-start" aria-label="Choose a topic">
+          <a href="#research"><b>🎮 Game & Trading</b><span>Paise kaise lagte hain aur risk kya hai?</span></a>
+          <a href="#safety"><b>📱 Fake Message</b><span>Asli ya suspicious? Pehchanna seekhein.</span></a>
+          <a href="#ai"><b>🔎 Link Check</b><span>Shak ho to AI se basic jaanch karein.</span></a>
+          <a href="#research"><b>💼 Fake Job</b><span>Work-from-home fraud se bachein.</span></a>
+        </div>
+
+
+      </div>
+    </section>
 
     <section id="india-tracker" class="dark-section">
       <div class="container">
@@ -435,44 +494,6 @@
             Emergency financial cyber fraud helpline: 1930.
           </p>
         </div>
-      </div>
-    </section>
-
-    <section class="hero" id="home">
-      <div class="container">
-
-        <img
-          src="./sochsathi-logo.png.png"
-          alt="SochSathi Original Logo"
-          class="logo"
-        >
-
-        <div class="tag">SOCHO • SAMJHO • SURAKSHIT RAHO</div>
-
-        <h1>
-          Parde Ke Peeche Ki
-          <span>Sachchai</span>
-        </h1>
-
-        <p class="hero-text">
-          Online games, trading, betting aur digital scams ke peeche
-          ka business model samjhiye. Sawaal poochhiye, jaankari
-          parakhiye aur apne faisle khud lijiye.
-        </p>
-
-        <p class="message">
-          Aapka Dimaag Aapka Hai… Kisi Aur Ke Ishare Par Mat Nacho.
-        </p>
-
-        <a href="#research" class="btn">Sachchai Jaaniye</a>
-
-        <a href="https://t.me/SmartDostIndiaBot"
-           target="_blank"
-           rel="noopener noreferrer"
-           class="btn btn-outline">
-          TRUST CHECK AI
-        </a>
-
       </div>
     </section>
 
