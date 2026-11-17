@@ -327,7 +327,28 @@
     .quick-start a{background:#171717;border:1px solid #49391e;border-radius:12px;padding:16px;text-align:left}
     .quick-start b{display:block;color:#e6bd67;font-size:17px}.quick-start span{font-size:13px;color:#ccc}
     @media(max-width:600px){.hero-showcase{height:220px}.float-chip{font-size:11px;padding:7px 9px}.chip-one{left:2%}.chip-two{right:2%}}
-\n  </style>
+\n
+    /* SochSathi visual refresh: social-first, accessible and responsive */
+    .nav{align-items:center}
+    .nav-social{display:flex;gap:9px;align-items:center}
+    .nav-social a{display:inline-flex;align-items:center;gap:6px;border:1px solid #785c30;border-radius:999px;padding:8px 12px;color:#f5d48c;font-size:13px;font-weight:700}
+    .nav-social a:hover,.nav-social a:focus-visible{background:#d6ad58;color:#111}
+    .social-banner{max-width:1100px;margin:0 auto 30px;border:1px solid #8b6b2e;border-radius:20px;overflow:hidden;box-shadow:0 18px 55px #0009;background:linear-gradient(125deg,#360d11,#090909 45%,#4a210c);position:relative}
+    .social-banner img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+    .social-banner-fallback{padding:28px 18px;text-align:center;min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+    .social-banner-fallback strong{font-size:clamp(25px,5vw,52px);color:#ffcf38;letter-spacing:.5px}
+    .social-banner-fallback span{color:#f6f6f6;font-size:clamp(13px,2vw,20px)}
+    .social-banner-fallback small{color:#ffcb68}
+    .social-strip{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin:20px auto 10px}
+    .social-strip a{border:1px solid #86642d;border-radius:12px;background:#1c1711;color:#f8e1b0;padding:12px 18px;font-weight:700;transition:background .2s,transform .2s}
+    .social-strip a:hover{background:#352514;transform:translateY(-2px)}
+    .trust-points{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:16px auto 0;color:#ded4c0;font-size:13px}
+    .trust-points span{padding:7px 11px;background:#18140f;border:1px solid #514024;border-radius:999px}
+    a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #ffdc87;outline-offset:3px}
+    @media(max-width:720px){.nav-social{justify-content:center;width:100%}.nav-social a{flex:1;justify-content:center}.social-banner{border-radius:12px}.social-strip a{flex:1;min-width:130px;text-align:center}.hero{padding-top:25px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+  </style>
 </head>
 
 <body>
@@ -343,6 +364,10 @@
         <a href="#research">Scam Guides</a>
         <a href="#india-tracker">India Data</a>
       </nav>
+      <div class="nav-social" aria-label="SochSathi social profiles">
+        <a href="https://www.instagram.com/sochsathiofficial/" target="_blank" rel="noopener noreferrer" aria-label="SochSathi Instagram">◎ Instagram</a>
+        <a href="https://www.facebook.com/share/19k16Rhf9h/" target="_blank" rel="noopener noreferrer" aria-label="SochSathi Facebook">f Facebook</a>
+      </div>
     </div>
   </header>
 
@@ -351,6 +376,13 @@
     <section class="hero" id="home">
       <div class="container">
 
+        <div class="social-banner" aria-label="SochSathi cyber safety cover">
+          <div class="social-banner-fallback">
+            <strong>🛡️ SochSathi</strong>
+            <span>Parde Ke Peeche Ki Sachchai</span>
+            <small>सोचो • समझो • सुरक्षित रहो</small>
+          </div>
+        </div>
         <div class="hero-showcase" aria-label="Online safety visual">
           <div class="showcase-orbit orbit-one"></div><div class="showcase-orbit orbit-two"></div>
           <div class="showcase-center"><span>🛡️</span><strong>SOCHSATHI</strong><small>PEHLE JAANCHO • PHIR BHAROSA KARO</small></div>
@@ -381,6 +413,11 @@
 
         <a href="https://t.me/SmartDostIndiaBot" target="_blank" rel="noopener noreferrer" class="btn btn-outline">FREE AI SE CHECK KAREIN</a>
 
+        <div class="social-strip" aria-label="Follow SochSathi">
+          <a href="https://www.instagram.com/sochsathiofficial/" target="_blank" rel="noopener noreferrer">📸 Instagram Follow Karein</a>
+          <a href="https://www.facebook.com/share/19k16Rhf9h/" target="_blank" rel="noopener noreferrer">📘 Facebook Page Dekhein</a>
+        </div>
+        <div class="trust-points" aria-label="Our commitments"><span>✓ Free Awareness</span><span>✓ Evidence-Based Guides</span><span>✓ 1930 Cyber Fraud Helpline</span></div>
         <div class="quick-start" aria-label="Choose a topic">
           <a href="#research"><b>🎮 Game & Trading</b><span>Paise kaise lagte hain aur risk kya hai?</span></a>
           <a href="#safety"><b>📱 Fake Message</b><span>Asli ya suspicious? Pehchanna seekhein.</span></a>
