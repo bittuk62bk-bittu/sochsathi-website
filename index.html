@@ -348,6 +348,19 @@
     @media(max-width:720px){.nav-social{justify-content:center;width:100%}.nav-social a{flex:1;justify-content:center}.social-banner{border-radius:12px}.social-strip a{flex:1;min-width:130px;text-align:center}.hero{padding-top:25px}}
     @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
+    /* Clear, human-first scam prevention */
+    .first-check-section{padding:55px 0}
+    .warning-panel{background:linear-gradient(135deg,#361214,#191010 65%);border:1px solid #b9534c;border-left:5px solid #ff786a;border-radius:16px;padding:30px;margin-bottom:38px;text-align:left}
+    .warning-eyebrow{display:block;color:#ffb0a7;font-weight:800;font-size:13px;letter-spacing:.06em;margin-bottom:10px}
+    .warning-panel h2{font-size:clamp(23px,4vw,35px);line-height:1.3;margin-bottom:13px}
+    .warning-panel p{color:#eee;max-width:920px}
+    .warning-honesty{margin-top:16px;padding-top:13px;border-top:1px solid #86504b;font-size:14px}
+    .check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px;margin:24px 0}
+    .check-card{background:#1b1b1b;border:1px solid #5d4931;border-radius:12px;padding:19px;text-align:left}
+    .check-card b{color:#f2ca7d;font-size:18px}.check-card p{color:#ddd;font-size:14px;margin-top:8px}
+    .help-panel{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#17201c;border:1px solid #4b8266;border-radius:14px;padding:22px;margin-top:25px}
+    .help-panel h3{font-size:21px;color:#a7ebc0}.help-panel p{max-width:720px;color:#e0e8e1;margin-top:8px}.help-panel .btn{margin:0}
+    @media(max-width:600px){.warning-panel{padding:20px}.check-grid{grid-template-columns:1fr 1fr;gap:9px}.check-card{padding:13px}.check-card b{font-size:15px}.help-panel .btn{width:100%;text-align:center}}
   </style>
 </head>
 
@@ -384,28 +397,19 @@
             <small>सोचो • समझो • सुरक्षित रहो</small>
           </div>
         </div>
-        <div class="hero-showcase" aria-label="Online safety visual">
-          <div class="showcase-orbit orbit-one"></div><div class="showcase-orbit orbit-two"></div>
-          <div class="showcase-center"><span>🛡️</span><strong>SOCHSATHI</strong><small>PEHLE JAANCHO • PHIR BHAROSA KARO</small></div>
-          <div class="float-chip chip-one">📩 Fake Message?</div><div class="float-chip chip-two">🔗 Suspicious Link?</div><div class="float-chip chip-three">💸 Payment Demand?</div>
-        </div>
-
         <div class="tag">SOCHO • SAMJHO • SURAKSHIT RAHO</div>
 
-        <h1>
-          Online Duniya Ko
-          <span>Aasaan Bhasha Mein Samjho</span>
-        </h1>
+        <h1>Online Scam Mein <span>Fasne Se Pehle Sach Jaano</span></h1>
 
         <p class="hero-text">
-          Koi link, message, job offer ya online earning scheme samajh nahi aa rahi? Yahan simple examples se jaaniye kya safe hai aur kis baat se savdhaan rehna hai.
+          Scammer kabhi bank officer banta hai, kabhi dost, kabhi job ya jaldi ameer banne ka sapna dikhata hai. Woh darr, laalach aur jaldi ka pressure bana kar aapka faisla badalne ki koshish karta hai. SochSathi par uski chaal samjho, phir faisla karo.
         </p>
 
         <p class="message">
-          Koi bhi online payment karne se pehle ek baar rukkar jaanch zaroor karein.
+          Har online insaan fraud nahi hota. Lekin bina jaanch kisi anjaan vyakti, link ya payment request par bharosa mat karo.
         </p>
 
-        <a href="#safety" class="btn">Fraud Pehchanna Seekhein</a>
+        <a href="#first-check" class="btn">Pehle Ye 5 Cheezein Check Karo</a>
 
         <a href="https://t.me/SmartDostIndiaBot" target="_blank" rel="noopener noreferrer" class="btn btn-outline">FREE AI SE CHECK KAREIN</a>
 
@@ -422,6 +426,29 @@
         </div>
 
 
+      </div>
+    </section>
+
+    <section id="first-check" class="dark-section first-check-section">
+      <div class="container">
+        <div class="warning-panel" role="note">
+          <span class="warning-eyebrow">⚠️ SCAMMER AAPKA DIMAGH KAISE GHUMATA HAI?</span>
+          <h2>Dar, laalach, bharosa aur jaldi — yahi uske hathiyar hain.</h2>
+          <p>“Abhi payment karo”, “Police case ho jayega”, “Guaranteed profit”, “OTP batao” — ye sab bade warning signs ho sakte hain. Sirf achchi photo, followers, website ya screenshot se koi offer asli sabit nahi hota.</p>
+          <p class="warning-honesty"><strong>Sach:</strong> Internet par 100 mein 80 log fraud hain — aisa koi verified universal aankda hum nahi batate. Humara maksad sab par shak karwana nahi, balki scam ke signals pehchanna sikhana hai.</p>
+        </div>
+        <h2 class="section-title">Paise bhejne se pehle <span class="gold">5 safety checks</span></h2>
+        <div class="check-grid">
+          <div class="check-card"><b>01 · Ruko</b><p>Jaldi payment karne ka pressure ho to turant faisla mat lo.</p></div>
+          <div class="check-card"><b>02 · Pehchaan jaano</b><p>Company, number aur website ko independent official source se verify karo.</p></div>
+          <div class="check-card"><b>03 · OTP / PIN bachao</b><p>OTP, UPI PIN, password ya screen-sharing access kisi ko mat do.</p></div>
+          <div class="check-card"><b>04 · Laalach se bachho</b><p>Guaranteed return, job ke liye deposit aur easy earning ke daave par sawal karo.</p></div>
+          <div class="check-card"><b>05 · Kisi se baat karo</b><p>Dar ya blackmail ho to akela faisla mat lo; trusted insaan se madad lo.</p></div>
+        </div>
+        <div class="help-panel">
+          <div><h3>🚨 Paise chale gaye? Turant action lo.</h3><p>India mein financial cyber fraud report karne ke liye <strong>1930</strong> par call karo aur National Cyber Crime Portal par complaint karo. Bank ko bhi turant inform karo.</p></div>
+          <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" class="btn">Cybercrime Report Karein</a>
+        </div>
       </div>
     </section>
 
