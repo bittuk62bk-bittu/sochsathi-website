@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="hi">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>चालान या चाल? | SochSathi</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#142329;color:#fff4db;font:16px system-ui;text-align:center}main{max-width:470px;margin:auto;padding:14px}h1{margin:3px 0 10px;font-size:25px}canvas{display:block;width:100%;max-height:54vh;object-fit:contain;background:#203840;border-radius:20px}#dialogue{min-height:7em;text-align:left;line-height:1.5;padding:12px 16px;background:#f9ebce;color:#222;border-radius:14px;margin:9px 0}button,a{display:inline-block;padding:9px 13px;border:0;border-radius:8px;background:#f6c868;color:#192326;font:700 15px system-ui;margin:4px;cursor:pointer}progress{display:block;width:100%;accent-color:#f6c868}
+</style>
+<main>
+<h1>चालान या चाल?</h1>
+<canvas width="480" height="440" aria-label="चाय की दुकान पर रवि और अमन बात करते हैं"></canvas>
+<p id="dialogue">एक मिनट की SochSathi कहानी। शुरू करने के लिए Play दबाएँ।</p>
+<progress max="60" value="0" aria-label="Playback progress"></progress>
+<button id="play" type="button">▶ Play</button><a target="_top" href="./#weekly-2026-11-23">Weekly Report देखें</a>
+</main>
+<script>
+const scenes=[
+[0,'रवि','भाई, व्हाट्सऐप पर चालान आया है। लिखा है, आज नहीं भरा तो जुर्माना बढ़ जाएगा।'],
+[8,'अमन','रुक रवि! ये देख, चालान देखने के लिए ए पी के फाइल डाउनलोड करने को कह रहा है।'],
+[17,'रवि','लेकिन फोटो और सरकारी लोगो तो असली जैसे लग रहे हैं। मैं कैसे चेक करूँ?'],
+[26,'अमन','मैसेज की फाइल मत खोल। ब्राउज़र में सरकारी ई-चालान वेबसाइट खुद खोल और वहाँ चेक कर।'],
+[36,'रवि','अच्छा, और ऐसे नए स्कैम के बारे में पता कहाँ चलेगा?'],
+[43,'अमन','भाई, सोच साथी की वेबसाइट पर हर हफ्ते वीकली रिपोर्ट आती है। वहाँ देख, और घरवालों को भी बता।'],
+[54,'अमन','ऑनलाइन फ्रॉड में पैसे गए? तुरंत उन्नीस तीस पर कॉल कर।']
+];
+const c=document.querySelector('canvas').getContext('2d'), label=document.querySelector('#dialogue'), play=document.querySelector('#play'), bar=document.querySelector('progress');
+let start=null,frame=0,last=-1, utterance=null;
+function ellipse(x,y,rx,ry,color){c.fillStyle=color;c.beginPath();c.ellipse(x,y,rx,ry,0,0,7);c.fill()}
+function box(x,y,w,h,r,color){c.fillStyle=color;c.beginPath();c.roundRect(x,y,w,h,r);c.fill()}
+function character(x,t,active,left){
+ const skin=left?'#e7aa78':'#b97552', shirt=left?'#178780':'#ca5f44';
+ const y=197+(active?Math.sin(t*5)*3:0);
+ ellipse(x,389,89,15,'#163537');
+ box(x-70,y+67,140,121,34,shirt);
+ box(x-16,y+45,32,40,9,skin);
+ ellipse(x,y,55,64,skin);
+ ellipse(x-55,y+8,10,14,skin);ellipse(x+55,y+8,10,14,skin);
+ c.fillStyle='#253036';c.beginPath();c.ellipse(x,y-21,56,45,0,Math.PI,Math.PI*2);c.lineTo(x+55,y-12);c.quadraticCurveTo(x+5,y-34,x-52,y-9);c.closePath();c.fill();
+ const blink=(t+(left?0:1.5))%4.8<.12;
+ for(const d of [-1,1]){ellipse(x+d*20,y+2,9,blink?1:7,'#fff4db');ellipse(x+d*20+(left?3:-3),y+2,3,blink?1:4,'#263439')}
+ ellipse(x,y+29,active?11:7,active?3+Math.abs(Math.sin(t*19))*7:2,'#643e34');
+ const hand=x+(left?62:-62), hy=y+113+(active?Math.sin(t*6)*8:0);
+ ellipse(hand,hy,18,18,skin);
+ if(left){box(hand-9,hy-26,27,44,5,'#263439');box(hand-6,hy-22,21,34,3,'#a9e0d1');}
+}
+function draw(t,i){
+ const g=c.createLinearGradient(0,0,0,440);g.addColorStop(0,'#173939');g.addColorStop(1,'#478377');c.fillStyle=g;c.fillRect(0,0,480,440);
+ ellipse(375,74,36,36,'#f6c868');box(18,81,444,16,8,'#e7ac59');
+ for(let n=0;n<8;n++)box(n*60,94,60,29,8,n%2?'#edc27b':'#af573d');
+ c.fillStyle='#fff2d1';c.font='bold 20px system-ui';c.textAlign='center';c.fillText('SOCHSATHI',240,56);
+ const ravi=scenes[i][1]==='रवि';
+ character(134,t,ravi&&t<60,true);character(344,t,!ravi&&t<60,false);
+ box(23,376,434,21,6,'#ae7047');box(29,397,422,43,3,'#714e39');
+ box(ravi?76:286,388,115,30,12,'#f6c868');
+ c.fillStyle='#182426';c.font='bold 17px system-ui';c.fillText(scenes[i][1],ravi?134:344,409);
+}
+function tick(now){
+ const t=Math.min(60,(now-start)/1000);
+ const i=scenes.findLastIndex(scene=>scene[0]<=t);
+ if(i!==last){last=i;label.textContent=scenes[i][1]+' — '+scenes[i][2];
+ if('speechSynthesis' in window){speechSynthesis.cancel();utterance=new SpeechSynthesisUtterance(scenes[i][2]);utterance.lang='hi-IN';utterance.rate=1.05;utterance.pitch=i===0||scenes[i][1]==='रवि'?1.12:.85;const voice=speechSynthesis.getVoices().find(v=>v.lang.toLowerCase().startsWith('hi'));if(voice)utterance.voice=voice;speechSynthesis.speak(utterance);}
+ }
+ draw(t,i);bar.value=t;
+ if(t<60) frame=requestAnimationFrame(tick);
+ else{start=null;play.textContent='↻ Replay';label.textContent='SochSathi की Weekly Cyber-Safety Report नीचे दिए लिंक से पढ़ें।';}
+}
+play.onclick=()=>{cancelAnimationFrame(frame);if('speechSynthesis' in window)speechSynthesis.cancel();if(start!==null){start=null;play.textContent='↻ Restart';return}last=-1;start=performance.now();play.textContent='■ Stop';frame=requestAnimationFrame(tick);};
+draw(0,0);
+</script>
+</html>
