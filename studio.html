@@ -48,11 +48,11 @@ h1{font-size:clamp(27px,5vw,49px);line-height:1.15;margin:9px 0 11px}h2{font-siz
  <div class="band" id="lineText" aria-live="polite">“₹1 में ट्रायल? पहले अगली फीस और AutoPay देख लो।”</div>
  <div class="scene-num"><span id="sceneLabel">Scene 1 / 6</span><span id="sceneTime">00:00–00:05</span></div><div class="screen-footer">सच्चाई मुफ्त • फैसला आपका</div>
  </div>
- <div class="controls"><button class="btn" id="play" type="button">▶ Demo चलाओ</button><button class="btn out" type="button" id="restart">↺ फिर से</button><span class="time" id="clock">00:00 / 00:35</span></div></div>
+ <div class="controls"><button class="btn" id="play" type="button">▶ Demo चलाओ</button><button class="btn out" type="button" id="restart">↺ फिर से</button><button class="btn out" type="button" id="voice" aria-pressed="true">🔊 आवाज़ चालू</button><span class="time" id="clock">00:00 / 00:35</span></div></div>
  <div>
  <div class="panel"><h3>₹1 Trial → AutoPay: एक Storyboard</h3><p>कुल 35 सेकंड का नमूना। किसी कंपनी या असली व्यक्ति पर आरोप नहीं। राशि सिर्फ एक काल्पनिक उदाहरण है।</p><div class="scenelist" id="scenes"></div></div>
  <div class="panel"><h3>असल Production Pipeline</h3><p>1. सरकारी/विश्वसनीय स्रोतों से जाँच → 2. 8–10 मिनट का मूल एपिसोड → 3. 5–10 स्वतंत्र 1 मिनट की Reels → 4. AI Presenter + वास्तविक बोलने वाली आवाज़ → 5. मालिक का YES → 6. सोशल पोस्टिंग।</p>
- <div class="notice">अभी कंटेंट-कतार, विज़ुअल डेमो और वेबसाइट तैयार हैं। वास्तविक AI video generation, natural voice, n8n approval तथा publishing अभी जुड़े नहीं हैं। HeyGen Free की इस महीने वीडियो लिमिट खत्म मिली। बिना अनुमति कोई paid generation नहीं होगा।</div></div>
+ <div class="notice">अभी कंटेंट-कतार, बोलने वाला ब्राउज़र डेमो और वेबसाइट तैयार हैं। Android/Chrome की उपलब्ध हिंदी Text-to-Speech आवाज़ इस्तेमाल होगी; यह natural AI voice का तैयार वीडियो नहीं है। असली AI video generation, natural studio voice, n8n approval तथा publishing अभी जुड़े नहीं हैं। HeyGen Free की इस महीने वीडियो लिमिट खत्म मिली। बिना अनुमति कोई paid generation नहीं होगा।</div></div>
  </div>
 </div>
 <section style="margin-top:44px"><h2>9 विषयों के अलग AI Presenters</h2><p class="intro">यह पहचान और विषयों की योजना है। असली डिजिटल किरदारों को बनाने और approved looks/voices जोड़ने का काम बाकी है। मालिक का चेहरा नहीं दिखेगा।</p>
@@ -73,6 +73,29 @@ var scenes=[
  {start:29,end:35,label:"साफ संदेश",text:"“पैसा खर्च करने से पहले सोचो। सच जानने के पैसे नहीं लगते।”",top:"SOCHSATHI",price:"सच",bottom:"FREE",warn:"पर्दे के पीछे की सच्चाई"}
 ];
 var time=0,playing=false,last=0,raf=0,total=35,current=-1;
+var voiceOn=true,voiceButton=document.getElementById("voice");
+var voiceSupported=("speechSynthesis" in window)&&("SpeechSynthesisUtterance" in window);
+var speech=voiceSupported?window.speechSynthesis:null;
+if(!voiceSupported){voiceOn=false;voiceButton.disabled=true;voiceButton.textContent="🔇 इस ब्राउज़र में आवाज़ नहीं";}
+function say(index){
+ if(!voiceSupported||!voiceOn||!playing)return;
+ speech.cancel();
+ var message=scenes[index].text.replace(/[“”]/g,"").trim();
+ var u=new SpeechSynthesisUtterance(message);
+ u.lang="hi-IN";u.rate=0.93;u.pitch=1;u.volume=1;
+ var voices=speech.getVoices();
+ var hindi=voices.find(function(v){return /^hi[-_]/i.test(v.lang) && /natural|neural|google/i.test(v.name)})||voices.find(function(v){return /^hi[-_]/i.test(v.lang)});
+ if(hindi)u.voice=hindi;
+ speech.speak(u);
+}
+voiceButton.onclick=function(){
+ if(!voiceSupported)return;
+ voiceOn=!voiceOn;
+ voiceButton.setAttribute("aria-pressed",String(voiceOn));
+ voiceButton.textContent=voiceOn?"🔊 आवाज़ चालू":"🔇 आवाज़ बंद";
+ if(!voiceOn)speech.cancel();
+ else if(playing)say(current);
+};
 var clock=document.getElementById("clock"),btn=document.getElementById("play"),bar=document.getElementById("progress"),box=document.getElementById("scenes");
 function mm(t){t=Math.floor(t);return "00:"+String(t).padStart(2,"0")}
 scenes.forEach(function(scene,i){var b=document.createElement("button");b.className="scenebtn";b.type="button";b.innerHTML='<span class="n">'+String(i+1).padStart(2,"0")+'</span><span class="lbl"></span>';b.querySelector(".lbl").textContent=scene.label+" · "+mm(scene.start)+"–"+mm(scene.end);b.onclick=function(){time=scene.start;render();};box.appendChild(b)});
@@ -80,14 +103,14 @@ function render(){
  var idx=Math.min(scenes.length-1,scenes.findIndex(function(s){return time>=s.start&&time<s.end}));if(idx<0)idx=scenes.length-1;
  if(idx!==current){var s=scenes[idx];current=idx;
  document.getElementById("lineText").textContent=s.text;document.getElementById("phoneTop").textContent=s.top;document.getElementById("phonePrice").textContent=s.price;document.getElementById("phoneBottom").textContent=s.bottom;document.getElementById("phoneWarn").textContent=s.warn;
- document.getElementById("sceneLabel").textContent="Scene "+(idx+1)+" / 6";document.getElementById("sceneTime").textContent=mm(s.start)+"–"+mm(s.end);
+ document.getElementById("sceneLabel").textContent="Scene "+(idx+1)+" / 6";if(playing)say(idx);document.getElementById("sceneTime").textContent=mm(s.start)+"–"+mm(s.end);
  Array.from(box.children).forEach(function(b,i){if(i===idx)b.setAttribute("aria-current","step");else b.removeAttribute("aria-current")});
  }
  bar.style.width=(time/total*100)+"%";clock.textContent=mm(time)+" / "+mm(total);
 }
-function step(now){if(!playing)return;if(!last)last=now;time+=(now-last)/1000;last=now;if(time>=total){time=total;playing=false;btn.textContent="▶ फिर से चलाओ";last=0;render();return;}render();raf=requestAnimationFrame(step)}
-btn.onclick=function(){if(playing){playing=false;cancelAnimationFrame(raf);btn.textContent="▶ जारी रखो";last=0;return;}if(time>=total){time=0;current=-1;}playing=true;btn.textContent="⏸ रोकें";last=0;raf=requestAnimationFrame(step);};
-document.getElementById("restart").onclick=function(){playing=false;cancelAnimationFrame(raf);time=0;current=-1;last=0;btn.textContent="▶ Demo चलाओ";render();};
+function step(now){if(!playing)return;if(!last)last=now;time+=(now-last)/1000;last=now;if(time>=total){time=total;playing=false;if(speech)speech.cancel();btn.textContent="▶ फिर से चलाओ";last=0;render();return;}render();raf=requestAnimationFrame(step)}
+btn.onclick=function(){if(playing){playing=false;cancelAnimationFrame(raf);if(speech)speech.cancel();btn.textContent="▶ जारी रखो";last=0;return;}if(time>=total){time=0;current=-1;}playing=true;btn.textContent="⏸ रोकें";last=0;render();if(voiceOn && voiceSupported)say(current);raf=requestAnimationFrame(step);};
+document.getElementById("restart").onclick=function(){playing=false;cancelAnimationFrame(raf);if(speech)speech.cancel();time=0;current=-1;last=0;btn.textContent="▶ Demo चलाओ";render();};
 render();
 var team=[["📉","SS-01","Binary Trading"],["🎯","SS-02","Colour Prediction & Betting"],["🛍️","SS-03","Shopping & Fashion"],["🔁","SS-04","Trials & AutoPay"],["🎓","SS-05","Courses & AI Earning"],["💳","SS-06","Loan Apps"],["💼","SS-07","Fake Jobs"],["📱","SS-08","Social Media"],["🛡️","SS-09","Cyber Safety"]];
 var people=document.getElementById("presenters");
