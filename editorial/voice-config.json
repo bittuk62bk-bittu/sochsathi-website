@@ -1,0 +1,23 @@
+{
+  "voice_policy": "SochSathi official narration voice. Reuse same exact voice ID in every future SochSathi generated video unless user explicitly changes it.",
+  "provider": "HeyGen Voice",
+  "voice_name": "Hindi Vlogger 20s",
+  "voice_id": "0GiuqxlLjhkwADaSIDWH",
+  "voice_mode": "instant",
+  "provider_status_checked": "ACTIVE on 2026-11-26",
+  "narration_language": "hi",
+  "default_speed": 0.96,
+  "editorial_style": "Story-led natural Hindi with characters and relatable situations; do not read prompt bullet points verbatim; no generic robot speech.",
+  "script_rules": [
+    "Use one specific fictional character or anonymized verified narrative.",
+    "Hook with relatable consequence, then reveal how it happened, then give a few verifiable protective steps.",
+    "Never name or accuse real persons or companies in consumer-facing scam videos.",
+    "Label composite fictional examples clearly.",
+    "Never shame victims; base safety facts on checked sources.",
+    "Video is published only after owner explicitly says YES."
+  ],
+  "cost_caveat": "An active public HeyGen voice ID can be reused while available and permitted by plan; generation may have usage limits, fees, or provider changes. No paid generation without approval.",
+  "sample_story": "Pooja ₹1 trial and recurring ₹599 illustrative Autopay story",
+  "sample_story_audio_url": "https://resource2.heygen.ai/text_to_speech/2facdf58198e47979f185a62d3e7241b/0GiuqxlLjhkwADaSIDWH/id=f710c0d5697b4f0a9d5ec52b7e5537d3.wav",
+  "sample_duration_seconds": 45.4093
+}
