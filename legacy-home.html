@@ -1,0 +1,1060 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SochSathi – Parde Ke Peeche Ki Sachchai</title>
+
+  <meta name="description" content="SochSathi par online games, trading, betting aur digital scams ke peeche ka business model, psychology aur sachchai samjhiye.">
+
+  <meta name="theme-color" content="#090909">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #090909;
+      color: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background: #111;
+      border-bottom: 1px solid #8b6b2e;
+      padding: 18px 0;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      color: #e6bd67;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #e6bd67;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 65px 0 75px;
+      background: radial-gradient(circle at top, #292013, #090909 65%);
+    }
+
+    .logo {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 15px;
+      margin: 0 auto 25px;
+      display: block;
+    }
+
+    .tag {
+      display: inline-block;
+      color: #e6bd67;
+      border: 1px solid #8b6b2e;
+      border-radius: 30px;
+      padding: 7px 17px;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(35px, 7vw, 62px);
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    h1 span,
+    .gold {
+      color: #e6bd67;
+    }
+
+    .hero-text {
+      max-width: 760px;
+      margin: auto;
+      color: #ccc;
+      font-size: 17px;
+    }
+
+    .message {
+      color: #e6bd67;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #d6ad58;
+      color: #111;
+      padding: 13px 25px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 25px 8px 0;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #f2d48f;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #e6bd67;
+      border: 1px solid #d6ad58;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-intro {
+      color: #aaa;
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto 35px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card-link { display:block; color:inherit; text-decoration:none; border-radius:8px; }
+    .card-link:hover h3 { color:#f2d48f; text-decoration:underline; text-underline-offset:4px; }
+
+    .card-visual {
+      min-height: 112px;
+      margin: -18px -18px 16px;
+      border-radius: 11px 11px 0 0;
+      display: grid;
+      place-items: center;
+      font-size: 58px;
+      line-height: 1;
+      background:
+        radial-gradient(circle at 50% 35%, rgba(230,189,103,.24), transparent 42%),
+        linear-gradient(135deg, #24201a, #101827 58%, #17120d);
+      border-bottom: 1px solid #6f5429;
+    }
+
+    .card-visual span {
+      filter: drop-shadow(0 5px 12px rgba(230,189,103,.22));
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #302719;
+      border-radius: 12px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      border-color: #d6ad58;
+      transform: translateY(-4px);
+    }
+
+    .card h3 {
+      color: #e6bd67;
+      margin-bottom: 12px;
+      font-size: 20px;
+    }
+
+    .card p {
+      color: #bbb;
+      font-size: 15px;
+    }
+
+    .dark-section {
+      background: #111;
+    }
+
+    .highlight {
+      text-align: center;
+      background: linear-gradient(135deg, #211a0e, #111);
+      border: 1px solid #8b6b2e;
+      border-radius: 15px;
+      padding: 40px 25px;
+    }
+
+    .highlight h2 {
+      color: #e6bd67;
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .highlight p {
+      color: #ccc;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .note {
+      color: #999;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background: #050505;
+      border-top: 1px solid #49391e;
+      padding: 35px 0;
+      text-align: center;
+    }
+
+    footer h2 {
+      color: #e6bd67;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #999;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px;
+      }
+
+      .hero {
+        padding: 45px 0 55px;
+      }
+
+      section {
+        padding: 45px 0;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+    }
+
+    /* SochSathi interactive learning features */
+    .tool-panel{background:#121212;border:1px solid #49391e;border-radius:14px;padding:24px;margin:28px 0}
+    .tool-panel h3{color:#e6bd67;font-size:22px;margin-bottom:10px}
+    .tool-panel p{color:#bbb}
+    .search-row{display:flex;gap:10px;max-width:680px;margin:18px auto 10px}
+    .search-row input{flex:1;min-width:0;background:#080808;border:1px solid #8b6b2e;color:#fff;border-radius:7px;padding:13px;font-size:16px}
+    .search-count{color:#aaa;text-align:center;font-size:13px;margin:8px}
+    .quiz-question{border-top:1px solid #3b3020;padding:18px 0}
+    .quiz-question strong{display:block;margin-bottom:10px;color:#eee}
+    .quiz-option{display:block;width:100%;text-align:left;margin:7px 0;padding:11px 13px;background:#1b1b1b;border:1px solid #514024;color:#eee;border-radius:7px;cursor:pointer}
+    .quiz-option:hover,.quiz-option.selected{border-color:#e6bd67;background:#2a2113}
+    .quiz-feedback{font-size:14px;color:#e6bd67;margin-top:8px;min-height:20px}
+    .faq-item{border-top:1px solid #49391e;padding:14px 0}
+    .faq-item summary{cursor:pointer;color:#e6bd67;font-weight:bold}
+    .faq-item p{color:#bbb;padding:10px 0 0}
+    .tool-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:15px}
+    .tool-actions button{background:#d6ad58;color:#111;border:0;border-radius:6px;padding:11px 18px;font-weight:bold;cursor:pointer}
+    @media(max-width:600px){.search-row{flex-direction:column}.tool-panel{padding:17px}}
+
+
+    .hero{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 35%,#302313 0,#111 48%,#080808 100%)}
+    .hero-showcase{height:250px;max-width:680px;margin:0 auto 25px;position:relative;display:grid;place-items:center;overflow:hidden;border:1px solid #594321;border-radius:22px;background:linear-gradient(120deg,rgba(230,189,103,.10),rgba(17,24,39,.75),rgba(230,189,103,.08));}
+    .hero-showcase:before{content:"";position:absolute;inset:-50%;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.09) 50%,transparent 60%);animation:shine 7s linear infinite}
+    .showcase-center{z-index:1;display:flex;flex-direction:column;align-items:center;gap:5px;color:#e6bd67}
+    .showcase-center span{font-size:62px;filter:drop-shadow(0 0 18px #b78a3b)}
+    .showcase-center strong{font-size:26px;letter-spacing:4px}
+    .showcase-center small{font-size:10px;letter-spacing:2px;color:#eee}
+    .showcase-orbit{position:absolute;width:210px;height:210px;border:1px solid rgba(230,189,103,.24);border-radius:50%;animation:orbit 16s linear infinite}
+    .orbit-two{width:300px;height:300px;animation-direction:reverse}
+    .float-chip{position:absolute;z-index:2;background:#171717;border:1px solid #8b6b2e;border-radius:30px;padding:9px 13px;font-size:13px;box-shadow:0 8px 25px #0008}
+    .chip-one{top:25px;left:5%}.chip-two{right:5%;top:45px}.chip-three{bottom:22px;left:50%;transform:translateX(-50%)}
+    @keyframes shine{to{transform:translateX(50%)}}
+    @keyframes orbit{to{transform:rotate(360deg)}}
+    .quick-start{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:25px auto;max-width:900px}
+    .quick-start a{background:#171717;border:1px solid #49391e;border-radius:12px;padding:16px;text-align:left}
+    .quick-start b{display:block;color:#e6bd67;font-size:17px}.quick-start span{font-size:13px;color:#ccc}
+    @media(max-width:600px){.hero-showcase{height:220px}.float-chip{font-size:11px;padding:7px 9px}.chip-one{left:2%}.chip-two{right:2%}}
+\n
+    /* SochSathi visual refresh: social-first, accessible and responsive */
+    .nav{align-items:center}
+    .nav-social{display:flex;gap:9px;align-items:center}
+    .nav-social a{display:inline-flex;align-items:center;gap:6px;border:1px solid #785c30;border-radius:999px;padding:8px 12px;color:#f5d48c;font-size:13px;font-weight:700}
+    .nav-social a:hover,.nav-social a:focus-visible{background:#d6ad58;color:#111}
+    .social-banner{max-width:1100px;margin:0 auto 30px;border:1px solid #8b6b2e;border-radius:20px;overflow:hidden;box-shadow:0 18px 55px #0009;background:linear-gradient(125deg,#360d11,#090909 45%,#4a210c);position:relative}
+    .social-banner img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
+    .social-banner-fallback{padding:28px 18px;text-align:center;min-height:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px}
+    .social-banner-fallback strong{font-size:clamp(25px,5vw,52px);color:#ffcf38;letter-spacing:.5px}
+    .social-banner-fallback span{color:#f6f6f6;font-size:clamp(13px,2vw,20px)}
+    .social-banner-fallback small{color:#ffcb68}
+    .social-strip{display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap;margin:20px auto 10px}
+    .social-strip a{border:1px solid #86642d;border-radius:12px;background:#1c1711;color:#f8e1b0;padding:12px 18px;font-weight:700;transition:background .2s,transform .2s}
+    .social-strip a:hover{background:#352514;transform:translateY(-2px)}
+    .trust-points{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin:16px auto 0;color:#ded4c0;font-size:13px}
+    .trust-points span{padding:7px 11px;background:#18140f;border:1px solid #514024;border-radius:999px}
+    a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #ffdc87;outline-offset:3px}
+    @media(max-width:720px){.nav-social{justify-content:center;width:100%}.nav-social a{flex:1;justify-content:center}.social-banner{border-radius:12px}.social-strip a{flex:1;min-width:130px;text-align:center}.hero{padding-top:25px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+    /* Clear, human-first scam prevention */
+    .first-check-section{padding:55px 0}
+    .warning-panel{background:linear-gradient(135deg,#361214,#191010 65%);border:1px solid #b9534c;border-left:5px solid #ff786a;border-radius:16px;padding:30px;margin-bottom:38px;text-align:left}
+    .warning-eyebrow{display:block;color:#ffb0a7;font-weight:800;font-size:13px;letter-spacing:.06em;margin-bottom:10px}
+    .warning-panel h2{font-size:clamp(23px,4vw,35px);line-height:1.3;margin-bottom:13px}
+    .warning-panel p{color:#eee;max-width:920px}
+    .warning-honesty{margin-top:16px;padding-top:13px;border-top:1px solid #86504b;font-size:14px}
+    .check-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px;margin:24px 0}
+    .check-card{background:#1b1b1b;border:1px solid #5d4931;border-radius:12px;padding:19px;text-align:left}
+    .check-card b{color:#f2ca7d;font-size:18px}.check-card p{color:#ddd;font-size:14px;margin-top:8px}
+    .help-panel{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;background:#17201c;border:1px solid #4b8266;border-radius:14px;padding:22px;margin-top:25px}
+    .help-panel h3{font-size:21px;color:#a7ebc0}.help-panel p{max-width:720px;color:#e0e8e1;margin-top:8px}.help-panel .btn{margin:0}
+    @media(max-width:600px){.warning-panel{padding:20px}.check-grid{grid-template-columns:1fr 1fr;gap:9px}.check-card{padding:13px}.check-card b{font-size:15px}.help-panel .btn{width:100%;text-align:center}}
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <div class="brand">SOCHSATHI</div>
+
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#safety">Safety</a>
+        <a href="#ai">AI Check</a>
+        <a href="#research">Scam Guides</a>
+        <a href="#weekly-cyber-report">Weekly Cyber Report</a>
+        <a href="#india-tracker">India Data</a>
+      </nav>
+      <div class="nav-social" aria-label="SochSathi social profiles">
+        <a href="https://www.instagram.com/sochsathiofficial/" target="_blank" rel="noopener noreferrer" aria-label="SochSathi Instagram">◎ Instagram</a>
+        <a href="https://www.facebook.com/share/19k16Rhf9h/" target="_blank" rel="noopener noreferrer" aria-label="SochSathi Facebook">f Facebook</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="container">
+
+        <img src="./file_00000000b73082118631f45c30c87821.png" alt="SochSathi official Golden Shield logo" style="display:block;width:min(240px,55vw);height:auto;margin:0 auto 24px;border-radius:50%" loading="eager">
+        <div class="social-banner" aria-label="SochSathi cyber safety cover">
+          <img src="./sochsathi-cover.jpg.png" alt="SochSathi cyber scam awareness Facebook cover" loading="eager" decoding="async" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" style="height:auto;aspect-ratio:auto">
+          <div class="social-banner-fallback">
+            <strong>🛡️ SochSathi</strong>
+            <span>Parde Ke Peeche Ki Sachchai</span>
+            <small>सोचो • समझो • सुरक्षित रहो</small>
+          </div>
+        </div>
+        <div class="tag">SOCHO • SAMJHO • SURAKSHIT RAHO</div>
+
+        <h1>Online Scam Mein <span>Fasne Se Pehle Sach Jaano</span></h1>
+
+        <p class="hero-text">
+          Scammer kabhi bank officer banta hai, kabhi dost, kabhi job ya jaldi ameer banne ka sapna dikhata hai. Woh darr, laalach aur jaldi ka pressure bana kar aapka faisla badalne ki koshish karta hai. SochSathi par uski chaal samjho, phir faisla karo.
+        </p>
+
+        <p class="message">
+          Har online insaan fraud nahi hota. Lekin bina jaanch kisi anjaan vyakti, link ya payment request par bharosa mat karo.
+        </p>
+
+        <a href="#first-check" class="btn">Pehle Ye 5 Cheezein Check Karo</a>
+
+        <a href="https://t.me/SmartDostIndiaBot" target="_blank" rel="noopener noreferrer" class="btn btn-outline">FREE AI SE CHECK KAREIN</a>
+
+        <div class="social-strip" aria-label="Follow SochSathi">
+          <a href="https://www.instagram.com/sochsathiofficial/" target="_blank" rel="noopener noreferrer">📸 Instagram Follow Karein</a>
+          <a href="https://www.facebook.com/share/19k16Rhf9h/" target="_blank" rel="noopener noreferrer">📘 Facebook Page Dekhein</a>
+          <a href="https://www.youtube.com/@sochsathiofficial" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://t.me/sochsathiofficial" target="_blank" rel="noopener noreferrer">Telegram Channel</a>
+          <a href="https://whatsapp.com/channel/0029VbElfTvJZg4750Eu3q3N" target="_blank" rel="noopener noreferrer">WhatsApp Channel</a>
+          <a href="https://x.com/soch_sathi" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+        </div>
+        <div class="trust-points" aria-label="Our commitments"><span>✓ Free Awareness</span><span>✓ Evidence-Based Guides</span><span>✓ 1930 Cyber Fraud Helpline</span></div>
+        <div class="quick-start" aria-label="Choose a topic">
+          <a href="#research"><b>🎮 Game & Trading</b><span>Paise kaise lagte hain aur risk kya hai?</span></a>
+          <a href="#safety"><b>📱 Fake Message</b><span>Asli ya suspicious? Pehchanna seekhein.</span></a>
+          <a href="#ai"><b>🔎 Link Check</b><span>Shak ho to AI se basic jaanch karein.</span></a>
+          <a href="#research"><b>💼 Fake Job</b><span>Work-from-home fraud se bachein.</span></a>
+        </div>
+
+
+      </div>
+    </section>
+
+    <section id="first-check" class="dark-section first-check-section">
+      <div class="container">
+        <div class="warning-panel" role="note">
+          <span class="warning-eyebrow">⚠️ SCAMMER AAPKA DIMAGH KAISE GHUMATA HAI?</span>
+          <h2>Dar, laalach, bharosa aur jaldi — yahi uske hathiyar hain.</h2>
+          <p>“Abhi payment karo”, “Police case ho jayega”, “Guaranteed profit”, “OTP batao” — ye sab bade warning signs ho sakte hain. Sirf achchi photo, followers, website ya screenshot se koi offer asli sabit nahi hota.</p>
+          <p class="warning-honesty"><strong>Sach:</strong> Internet par 100 mein 80 log fraud hain — aisa koi verified universal aankda hum nahi batate. Humara maksad sab par shak karwana nahi, balki scam ke signals pehchanna sikhana hai.</p>
+        </div>
+        <h2 class="section-title">Paise bhejne se pehle <span class="gold">5 safety checks</span></h2>
+        <div class="check-grid">
+          <div class="check-card"><b>01 · Ruko</b><p>Jaldi payment karne ka pressure ho to turant faisla mat lo.</p></div>
+          <div class="check-card"><b>02 · Pehchaan jaano</b><p>Company, number aur website ko independent official source se verify karo.</p></div>
+          <div class="check-card"><b>03 · OTP / PIN bachao</b><p>OTP, UPI PIN, password ya screen-sharing access kisi ko mat do.</p></div>
+          <div class="check-card"><b>04 · Laalach se bachho</b><p>Guaranteed return, job ke liye deposit aur easy earning ke daave par sawal karo.</p></div>
+          <div class="check-card"><b>05 · Kisi se baat karo</b><p>Dar ya blackmail ho to akela faisla mat lo; trusted insaan se madad lo.</p></div>
+        </div>
+        <div class="help-panel">
+          <div><h3>🚨 Paise chale gaye? Turant action lo.</h3><p>India mein financial cyber fraud report karne ke liye <strong>1930</strong> par call karo aur National Cyber Crime Portal par complaint karo. Bank ko bhi turant inform karo.</p></div>
+          <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" class="btn">Cybercrime Report Karein</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="weekly-cyber-report" class="dark-section" aria-labelledby="weekly-cyber-title" style="scroll-margin-top: 9rem">
+      <div class="container">
+        <h2 id="weekly-cyber-title" class="section-title">Weekly Cyber-Safety Report</h2>
+        <article id="weekly-2026-11-23" class="tool-panel" style="scroll-margin-top: 9rem">
+          <h3>India Scam Update | 16–22 November 2026</h3>
+          <p>Published <time datetime="2026-11-23">23 November 2026</time></p>
+          <a class="btn" href="weekly-cartoon-2026-11-23.html">1-minute cartoon dekhein</a>
+          <div class="faq-item">
+            <h4>Suspicious links aur fake Android apps</h4>
+            <p><strong>21 November.</strong> Delhi Police ne malicious Android app files se jude network ki jaanch mein 22 arrests announce kiye. List mein fake e-challan aur bank verification files bhi thi. Message se aayi APK install mat karo. Challan ya bank alert official app ya website khud kholkar verify karo. <a class="gold" style="text-decoration: underline" href="https://delhipolice.gov.in/Images/newpressrelease/44351_21%2011%2026%20WD%20FRAUDSTER.pdf">Delhi Police press release</a></p>
+          </div>
+          <div class="faq-item">
+            <h4>Fake job offers</h4>
+            <p><strong>19 November.</strong> Chandigarh ki ek local complaint mein WhatsApp par part-time job offer ke baad Telegram tasks ke liye deposit maanga gaya. Company ki official careers page par offer check karo aur task ki kamai unlock karne ke liye payment mat karo. <a class="gold" style="text-decoration: underline" href="https://timesofindia.indiatimes.com/city/chandigarh/fake-job-offer-costs-dhanas-man-2-1-lakh/articleshow/135969857.cms">Chandigarh case report</a></p>
+          </div>
+          <div class="faq-item">
+            <h4>Fake loan apps aur online gaming fraud</h4>
+            <p>In dono topics par is hafte koi meaningful nayi official advisory verify nahi mili. Loan app ko lender ki official website par check karo. Game ki winnings nikalne ke liye chat par extra deposit maanga jaye to payment roko aur official support se verify karo. <a class="gold" style="text-decoration: underline" href="https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=50846">RBI ki loan app guidance</a></p>
+          </div>
+          <div class="faq-item">
+            <h4>Official awareness update</h4>
+            <p>PIB ki 13 November ki release ke mutabik, RBI Chandigarh ne 16–20 November ke liye Punjab ke teen districts mein students aur teachers ke liye phishing pehchaanne aur fraud report karne par sessions announce kiye the. <a class="gold" style="text-decoration: underline" href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2335902&amp;lang=1&amp;reg=17">PIB release</a></p>
+          </div>
+          <div class="faq-item">
+            <h4>Paise chale gaye?</h4>
+            <p>Turant <a class="gold" href="tel:1930"><strong>1930</strong></a> par call karo, bank ko inform karo aur transaction ID aur screenshots save karo. <a class="gold" style="text-decoration: underline" href="https://cybercrime.gov.in/">National Cyber Crime Reporting Portal par report karo</a>.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="india-tracker" class="dark-section">
+      <div class="container">
+        <div class="highlight" style="margin-bottom:30px;padding:48px 25px">
+          <div class="tag">SOCHSATHI • INDIA CYBER AWARENESS</div>
+          <h1 style="font-size:clamp(34px,7vw,58px);margin:8px 0 18px">
+            INDIA CYBER FRAUD <span class="gold">TRACKER 2026</span>
+          </h1>
+          <p class="hero-text">
+            Har din badalte digital fraud ko samjhiye. Sarkari data dekhiye,
+            scam ke naye tareeqe pehchaniye aur apne paise aur pehchaan ko surakshit rakhiye.
+          </p>
+          <p class="message">Aankde dekho. Sach samjho. Phir faisla karo.</p>
+          <a href="#tracker-numbers" class="btn">India ke Aankde Dekhein</a>
+          <a href="https://t.me/SmartDostIndiaBot" target="_blank" rel="noopener noreferrer" class="btn btn-outline">TRUST CHECK AI Kholein</a>
+          <p class="note">Educational awareness platform • Figures are dated and source-linked, not a live government feed.</p>
+        </div>
+        <div class="tag">VERIFIED PUBLIC DATA • INDIA</div>
+        <h2 class="section-title"><span class="gold">India ke Sarkari Cyber-Fraud Aankde</span></h2>
+        <p class="section-intro">
+          Bharat mein report hue online financial fraud aur cybercrime ke sarkari aankde.
+          Har figure ke saath uski reporting period aur original source diya gaya hai.
+        </p>
+        <div id="tracker-numbers"></div>
+
+        <div class="cards">
+          <div class="card">
+            <h3>₹55,050+ Crore</h3>
+            <p>2021–2025 ke dauran NCRP par report hua financial cyber-fraud amount.</p>
+          </div>
+          <div class="card">
+            <h3>65.89 Lakh+</h3>
+            <p>2021–2025 ke dauran report hui financial cyber-fraud complaints.</p>
+          </div>
+          <div class="card">
+            <h3>1.95 Lakh+ FIRs</h3>
+            <p>2021–2025 ke dauran financial cyber-fraud complaints ke sambandh mein darj FIRs.</p>
+          </div>
+          <div class="card">
+            <h3>₹11,158 Crore+</h3>
+            <p>I4C ke mutabik 30 June 2026 tak 32.80 lakh+ complaints mein itni rakam bachayi gayi.</p>
+          </div>
+        </div>
+
+        <div class="highlight" style="margin-top:24px">
+          <h2>Apna sawaal AI se poochhiye</h2>
+          <p>
+            Koi suspicious link, message, screenshot ya online earning offer mila?
+            TRUST CHECK AI par jaakar basic risk analysis aur safety guidance lijiye.
+          </p>
+          <a href="https://t.me/SmartDostIndiaBot" target="_blank" rel="noopener noreferrer" class="btn">TRUST CHECK AI par jaayein</a>
+          <p class="note">Bot ki available features aur subscription ki shartein Telegram par check karein. AI analysis 100% guarantee nahi hai.</p>
+        </div>
+
+        <div class="highlight" style="margin-top:24px">
+          <h2>2026 ka latest available snapshot</h2>
+          <p>
+            1 January–30 June 2026 ke liye media ne government officials ke hawale se
+            12.71 lakh+ cyber-fraud complaints aur ₹10,178 crore+ reported fraudulent
+            transactions bataye. Is figure ko official monthly live counter na samjhein.
+          </p>
+          <p class="note">
+            NCRB ke latest published annual report (2024) mein 1,01,928 cybercrime cases
+            registered bataye gaye. Complaint count aur police-registered cases alag metrics hain.
+          </p>
+        </div>
+
+        <h2 class="section-title" style="margin-top:45px">Kaun-kaun se fraud par nazar rakhi ja rahi hai?</h2>
+        <p class="section-intro">
+          Ye major reported cyber-fraud patterns aur crime categories hain; har category ka
+          alag, current national case total publicly available nahi hota.
+        </p>
+        <div class="cards">
+          <div class="card"><h3>Digital Arrest & Impersonation</h3><p>Fake police/agency calls, video-call threats aur officer ban kar paise mangna.</p></div>
+          <div class="card"><h3>Investment & Trading Fraud</h3><p>Fake trading apps, task-based investment, binary/colour prediction claims aur Ponzi-style offers.</p></div>
+          <div class="card"><h3>Phishing & Fake Links</h3><p>Fake bank/KYC websites, malicious links aur account details churaane ki koshish.</p></div>
+          <div class="card"><h3>UPI & Payment Fraud</h3><p>Fake collect requests, QR-code tricks, payment screenshots aur remote-access misuse.</p></div>
+          <div class="card"><h3>Job & Task Scams</h3><p>Work-from-home offers, prepaid tasks, registration fees aur fake recruitment.</p></div>
+          <div class="card"><h3>Social Media & Identity Fraud</h3><p>Fake profiles, account takeover, impersonation aur friendship/romance scams.</p></div>
+          <div class="card"><h3>Sextortion & Cyber Blackmail</h3><p>Threats involving private images, fake video calls and online extortion.</p></div>
+          <div class="card"><h3>Loan App & Recovery Harassment</h3><p>Fraudulent loan apps, hidden charges, data misuse and threatening recovery tactics.</p></div>
+          <div class="card"><a class="card-link" href="lottery-prize-courier.html"><h3>Lottery, Prize & Courier Fraud</h3><p>Fake winnings, parcel/customs calls and advance-fee demands.</p></a></div>
+        </div>
+
+        <div class="highlight" style="margin-top:24px">
+          <h2>Data ko samajhna zaroori hai</h2>
+          <p>
+            Reported amount ka matlab confirmed court-proven loss nahi hota. Complaint,
+            FIR, investigation, lien/frozen amount aur refunded amount alag-alag cheezein hain.
+            Hum bina evidence kisi vyakti ya platform ko criminal declare nahi karte.
+          </p>
+          <p style="margin-top:15px">
+            <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287039&lang=1&reg=1" target="_blank" rel="noopener noreferrer" class="btn">MHA / PIB Cybercrime Data</a>
+            <a href="https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287674&lang=1&reg=1" target="_blank" rel="noopener noreferrer" class="btn btn-outline">I4C Official Update</a>
+            <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">National Cyber Crime Portal</a>
+          </p>
+          <p class="note">
+            Last verified from cited public releases: 30 June 2026 / releases dated July 2026.
+            Government data is not published here as a live monthly API. SochSathi will update
+            this dashboard when a newer verifiable official release becomes available.
+            Emergency financial cyber fraud helpline: 1930.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="container">
+
+        <h2 class="section-title">
+          <span class="gold">GAME KE PICHE KA GAME</span>
+        </h2>
+
+        <p class="section-intro">
+          Sirf screen par jo dikh raha hai wahi poori kahani nahi hoti.
+          Hum samjhenge ki in platforms ka business model kaise kaam karta hai.
+        </p>
+
+        <div class="tool-panel" id="scam-search">
+          <h3>🔎 Scam Guide Search</h3>
+          <p>Topic ka naam likhein; neeche diye gaye research cards filter ho jayenge.</p>
+          <div class="search-row"><input id="guideSearch" type="search" placeholder="Jaise: UPI, betting, job, digital arrest..." aria-label="Scam guide search"></div>
+          <div class="search-count" id="searchCount" aria-live="polite">14 topics available</div>
+        </div>
+
+        <div class="cards" id="researchCards">
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>🎯</span></div>
+            <a class="card-link" href="colour-prediction.html"><h3>Colour Prediction</h3>
+            <p>
+              Colour prediction platforms kaise kaam karte hain?
+              Game rules, probability, incentives aur risk ko samjhiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>📉</span></div>
+            <a class="card-link" href="binary-trading.html"><h3>Binary Trading</h3>
+            <p>
+              Binary options, payout structure, risk aur online
+              trading promotions ke peeche ki sachchai samjhiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>🏏</span></div>
+            <a class="card-link" href="cricket-betting.html"><h3>Cricket Betting</h3>
+            <p>
+              Betting platforms, odds, commissions aur user behaviour
+              ke business model ko samjhiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>📲</span></div>
+            <a class="card-link" href="vip-signal-groups.html"><h3>VIP Signal Groups</h3>
+            <p>
+              Fake profit screenshots, paid tips, referral income
+              aur guaranteed profit claims ko parakhiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>🛡️</span></div>
+            <h3>Digital Scams</h3>
+            <p>
+              Fake websites, suspicious links, impersonation aur
+              online fraud ke common tareeqon ko samjhiye.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>🧠</span></div>
+            <h3>Psychology & Manipulation</h3>
+            <p>
+              Urgency, greed, fear of missing out aur reward systems
+              insaan ke faislon ko kaise influence karte hain?
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>📹</span></div>
+            <a class="card-link" href="digital-arrest.html"><h3>Digital Arrest Scam</h3>
+            <p>
+              Fake police, CBI, ED ya courier-officer ban kar video call
+              par dhamkana, arrest ka dar dikhana aur paise transfer karwana
+              jaise fraud tactics ko samjhiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>🔗</span></div>
+            <a class="card-link" href="fake-links.html"><h3>Fake Links & Websites</h3>
+            <p>
+              नकली bank/KYC links, fake payment pages, look-alike websites
+              aur phishing messages ko pehchanne ke tareeqe jaaniye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>💻</span></div>
+            <a class="card-link" href="job-scams.html"><h3>Job & Work-from-Home Scams</h3>
+            <p>
+              Registration fee, task complete karne ke naam par deposit,
+              fake salary offers aur work-from-home fraud ko samjhiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>📱</span></div>
+            <a class="card-link" href="upi-payment-fraud.html"><h3>OTP, UPI & Payment Fraud</h3>
+            <p>
+              Fake collect requests, QR code tricks, screen-sharing apps
+              aur OTP/UPI PIN churaane ke common tareeqon se savdhaan rahiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>👤</span></div>
+            <a class="card-link" href="social-media-impersonation.html"><h3>Social Media & Impersonation</h3>
+            <p>
+              Fake Instagram/Facebook profiles, hacked accounts,
+              celebrity impersonation aur friend-in-need messages ko verify karein.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>🔒</span></div>
+            <a class="card-link" href="sextortion-blackmail.html"><h3>Sextortion & Blackmail</h3>
+            <p>
+              Fake video-call traps, private images ki dhamki aur online
+              blackmail ke waqt evidence aur safety ke practical steps samjhiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>💸</span></div>
+            <a class="card-link" href="loan-investment-scams.html"><h3>Loan & Investment Scams</h3>
+            <p>
+              Fake loan apps, advance-fee demands, recovery harassment,
+              Ponzi-style promises aur unverified investment offers ko parakhiye.
+            </p></a>
+          </div>
+
+          <div class="card">
+            <div class="card-visual" aria-hidden="true"><span>🎁</span></div>
+            <h3>Lottery, Prize & Courier Scams</h3>
+            <p>
+              Fake prize messages, parcel/customs calls, lottery claims
+              aur fees ke naam par hone wale fraud ko pehchaniye.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="note">
+          Har platform ya service ko bina saboot scam nahi kaha jayega.
+          Hum facts, available evidence aur risk ko alag-alag samjhenge.
+        </p>
+
+      </div>
+    </section>
+
+    <section class="dark-section" id="quiz">
+      <div class="container">
+        <h2 class="section-title">SOCHSATHI <span class="gold">SAFETY QUIZ</span></h2>
+        <p class="section-intro">5 chhote scenarios se apni online safety awareness check karein. Ye learning quiz hai, certification ya security test nahi.</p>
+        <div class="tool-panel" id="safetyQuiz">
+          <div id="quizQuestions"></div>
+          <div class="tool-actions"><button type="button" id="quizSubmit">Mera Score Dekhein</button><button type="button" id="quizReset">Dobara Shuru Karein</button></div>
+          <p id="quizResult" class="message" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="related-guides">
+      <div class="container">
+        <h2 class="section-title">Saare <span class="gold">Scam Guides</span></h2>
+        <p class="section-intro">Kisi ek topic ko detail mein samajhne ke liye guide kholein.</p>
+        <div class="cards">
+          <a class="card card-link" href="colour-prediction.html"><h3>Colour Prediction</h3><p>Game model, probability aur risk.</p></a>
+          <a class="card card-link" href="binary-trading.html"><h3>Binary Trading</h3><p>Payout structure aur trading risks.</p></a>
+          <a class="card card-link" href="cricket-betting.html"><h3>Cricket Betting</h3><p>Odds, commissions aur behaviour.</p></a>
+          <a class="card card-link" href="vip-signal-groups.html"><h3>VIP Signal Groups</h3><p>Paid tips aur profit claims.</p></a>
+          <a class="card card-link" href="digital-arrest.html"><h3>Digital Arrest</h3><p>Fake officer calls aur threats.</p></a>
+          <a class="card card-link" href="fake-links.html"><h3>Fake Links & Websites</h3><p>Phishing aur look-alike pages.</p></a>
+          <a class="card card-link" href="job-scams.html"><h3>Job Scams</h3><p>Fake recruitment aur task fraud.</p></a>
+          <a class="card card-link" href="upi-payment-fraud.html"><h3>UPI & Payment Fraud</h3><p>Collect requests aur payment tricks.</p></a>
+          <a class="card card-link" href="social-media-impersonation.html"><h3>Social Media Impersonation</h3><p>Fake profiles aur account misuse.</p></a>
+          <a class="card card-link" href="sextortion-blackmail.html"><h3>Sextortion & Blackmail</h3><p>Threats aur evidence safety.</p></a>
+          <a class="card card-link" href="loan-investment-scams.html"><h3>Loan & Investment Scams</h3><p>Advance fee aur fake returns.</p></a>
+          <a class="card card-link" href="lottery-prize-courier.html"><h3>Lottery & Courier Fraud</h3><p>Fake prize aur parcel demands.</p></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Common <span class="gold">Questions</span></h2>
+        <p class="section-intro">SochSathi aur online safety se jude aam sawaalon ke seedhe jawaab.</p>
+        <div class="tool-panel">
+          <details class="faq-item"><summary>Kya SochSathi kisi platform ko bina proof scam declare karta hai?</summary><p>Nahi. Hum available evidence, public sources aur risk indicators ko alag rakhte hain. Har allegation ko verified fact nahi maana jata.</p></details>
+          <details class="faq-item"><summary>Kya TRUST CHECK AI ka result 100% sahi hota hai?</summary><p>Nahi. AI galti kar sakta hai. Iska analysis ek initial safety aid hai; important decisions se pehle official aur independent sources se verify karein.</p></details>
+          <details class="faq-item"><summary>Agar online paise ka fraud ho gaya to pehle kya karein?</summary><p>Turant 1930 par call karein, cybercrime.gov.in par report karein aur apne bank/payment provider ko inform karein. Transaction IDs aur screenshots sambhal kar rakhein.</p></details>
+          <details class="faq-item"><summary>Kya OTP, UPI PIN ya password TRUST CHECK AI ko bhejna chahiye?</summary><p>Kabhi nahi. OTP, password, UPI PIN, CVV ya full card details kisi ko bhi share na karein—AI bot ko bhi nahi.</p></details>
+          <details class="faq-item"><summary>Kya reported cyber-fraud amount ka matlab utna paisa confirm chori hua?</summary><p>Reported amount, confirmed loss, frozen amount aur refunded amount alag metrics hain. Har figure ke saath uska source aur period dekhna zaroori hai.</p></details>
+          <details class="faq-item"><summary>SochSathi ki information kaise verify karun?</summary><p>Har research topic par diye gaye original sources aur official portals ko khud check karein. Data ki reporting date aur limitations bhi padhein.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="dark-section" id="safety">
+      <div class="container">
+
+        <h2 class="section-title">
+          Online Rahiye, <span class="gold">Hoshiyar Rahiye</span>
+        </h2>
+
+        <p class="section-intro">
+          Kisi bhi online offer, message, link ya earning claim par
+          bharosa karne se pehle uski jaanch zaroor karein.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>1. Claim Par Sawaal Karein</h3>
+            <p>
+              Guaranteed profit, double money aur instant income
+              jaise claims ko bina jaanch accept na karein.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>2. Evidence Check Karein</h3>
+            <p>
+              Screenshots aur testimonials ke alawa independent
+              sources aur official information bhi dekhein.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>3. Personal Data Bachayein</h3>
+            <p>
+              OTP, password, UPI PIN, CVV ya sensitive personal
+              information kisi ke saath share na karein.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>4. Digital Arrest Se Darein Nahi</h3>
+            <p>
+              Video call par police ya agency ban kar dhamki dene wale
+              ko paise transfer na karein. Call kaat kar official channel
+              se khud verification karein.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>5. Fraud Ho Jaye To Turant Action</h3>
+            <p>
+              Financial cyber fraud mein turant 1930 par call karein
+              aur cybercrime.gov.in par report karein. Bank ko bhi
+              jaldi inform karein.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="ai">
+      <div class="container">
+
+        <div class="highlight">
+
+          <h2>TRUST CHECK AI</h2>
+
+          <p>
+            Koi suspicious message, link ya online offer mila hai?
+            TRUST CHECK AI se uski basic risk analysis samajhne
+            mein madad lijiye.
+          </p>
+
+          <a href="https://t.me/SmartDostIndiaBot"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn">
+            Telegram Bot Kholein
+          </a>
+
+          <p class="note">
+            AI analysis ek madadgaar tool hai, 100% guarantee nahi.
+            Zaroori faisle karne se pehle independent verification karein.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="dark-section" id="academy">
+      <div class="container">
+
+        <h2 class="section-title">
+          SOCHSATHI <span class="gold">ACADEMY</span>
+        </h2>
+
+        <p class="section-intro">
+          Digital awareness, online safety, business models aur
+          financial risk ko aasaan bhaasha mein samajhne ka ek learning platform.
+        </p>
+
+        <div class="highlight">
+          <h2>Seekhiye. Samajhiye. Sawaal Kijiye.</h2>
+          <p>
+            SochSathi Academy ka educational content aur learning
+            resources dheere-dheere yahan launch kiye jayenge.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+<section id="contact" class="dark-section">
+  <div class="container">
+    <div class="highlight">
+      <h2>CONTACT <span class="gold">SOCHSATHI</span></h2>
+
+      <p>
+        Online safety, digital awareness ya SochSathi se judi
+        kisi bhi jaankari ke liye humse Telegram par sampark karein.
+      </p>
+
+      <a href="https://t.me/SmartDostIndiaBot"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="btn">
+        Telegram par Sampark Karein
+      </a>
+
+      <p class="note">
+        Humein social media par follow karein:
+        <a href="https://www.facebook.com/share/19k16Rhf9h/" target="_blank" rel="noopener noreferrer">Facebook</a>
+        &nbsp; | &nbsp;
+        <a href="https://www.instagram.com/sochsathiofficial/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+    <section id="about">
+      <div class="container">
+
+        <h2 class="section-title">SochSathi Ke Baare Mein</h2>
+
+        <p class="section-intro">
+          SochSathi ka maqsad logon ko online duniya ke business
+          models, psychology, incentives, risks aur digital manipulation
+          ko samajhne mein madad dena hai.
+          Hamara focus awareness aur evidence-based education par hai.
+        </p>
+
+        <div class="highlight">
+          <h2>Parde Ke Peeche Ki Sachchai</h2>
+          <p>
+            Hum aapke liye faisle nahi karte.
+            Hum aapko sawaal poochhne aur apne faisle khud lene
+            ke liye jaankari dete hain.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+
+      <h2>SOCHSATHI</h2>
+
+      <p>Parde Ke Peeche Ki Sachchai</p>
+
+      <p>Socho • Samjho • Surakshit Raho</p>
+      <p style="margin-top:18px">
+        <strong>SochSathi Social Media</strong><br>
+        <a href="https://www.facebook.com/share/19k16Rhf9h/" target="_blank" rel="noopener noreferrer">Facebook Page</a>
+        &nbsp; | &nbsp;
+        <a href="https://www.instagram.com/sochsathiofficial/" target="_blank" rel="noopener noreferrer">Instagram @sochsathiofficial</a>
+        &nbsp; | &nbsp;
+        <a href="https://www.youtube.com/@sochsathiofficial" target="_blank" rel="noopener noreferrer">YouTube</a>
+        &nbsp; | &nbsp;
+        <a href="https://t.me/sochsathiofficial" target="_blank" rel="noopener noreferrer">Telegram Channel</a>
+        &nbsp; | &nbsp;
+        <a href="https://whatsapp.com/channel/0029VbElfTvJZg4750Eu3q3N" target="_blank" rel="noopener noreferrer">WhatsApp Channel</a>
+        &nbsp; | &nbsp;
+        <a href="https://x.com/soch_sathi" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+      </p>
+
+      <p>
+        Created &amp; Managed by<br>
+        <strong>PATHAN TASLIMKHAN NABIALAMKHAN (Bittu Khan)</strong>
+      </p>
+
+      <p><a href="./privacy-policy.html">Privacy Policy</a> &nbsp; | &nbsp; <a href="./disclaimer.html">Disclaimer</a></p>
+      <p>For awareness and educational purposes only.</p>
+      <p>© 2026 SochSathi. All Rights Reserved.</p>
+
+    </div>
+  </footer>
+
+
+<script>
+(function(){
+  const input=document.getElementById('guideSearch');
+  const grid=document.getElementById('researchCards');
+  const count=document.getElementById('searchCount');
+  if(input&&grid){
+    const cards=Array.from(grid.querySelectorAll(':scope > .card'));
+    input.addEventListener('input',function(){
+      const q=this.value.trim().toLocaleLowerCase();
+      let shown=0;
+      cards.forEach(card=>{
+        const match=card.textContent.toLocaleLowerCase().includes(q);
+        card.hidden=!match;
+        if(match) shown++;
+      });
+      count.textContent=shown+' of '+cards.length+' topics shown';
+    });
+  }
+  const quizData=[
+    {q:'Unknown person says: “Aapka bank account block hoga, OTP batao.” Kya karein?',a:['OTP share kar dein','Call/message ignore karke bank ke official number se verify karein','Unke bheje link par login karein'],correct:1,why:'Bank ya genuine support ko OTP batane ki zaroorat nahi hoti. Official channel se khud contact karein.'},
+    {q:'Koi online task ke liye pehle ₹2,000 deposit maangta hai aur guaranteed return bolta hai.',a:['Pehle chhota deposit bhejein','Doston se udhaar lekar bhejein','Payment rok kar offer aur company independently verify karein'],correct:2,why:'Advance deposit + guaranteed earning ek strong warning sign hai.'},
+    {q:'Koi QR code bhejkar kehta hai scan karo aur paise receive honge.',a:['Yaad rakhein: QR scan/UPI PIN enter karna payment authorize kar sakta hai','Turant scan karein','UPI PIN message mein bhejein'],correct:0,why:'Paise receive karne ke liye aam taur par UPI PIN enter nahi karna hota.'},
+    {q:'Video call par koi police officer bankar arrest ki dhamki deta hai aur paise transfer bolta hai.',a:['Darr kar transfer karein','Call disconnect karein, paise na bhejein aur official agency se independently verify karein','Apna Aadhaar/OTP bhejein'],correct:1,why:'Digital arrest ke naam par video call par dhamki aur payment demand ek known fraud pattern hai.'},
+    {q:'Aapke account se paise fraudulently nikal gaye. Sabse pehla practical step?',a:['24 ghante wait karein','Evidence delete karein','1930 par turant call karein, cybercrime.gov.in par report karein aur bank ko inform karein'],correct:2,why:'Fast reporting se transaction ko hold/freeze karne ka mauka mil sakta hai; refund ki guarantee nahi hoti.'}
+  ];
+  const host=document.getElementById('quizQuestions');
+  const result=document.getElementById('quizResult');
+  if(!host)return;
+  let answers=Array(quizData.length).fill(-1);
+  function render(){
+    host.innerHTML='';
+    quizData.forEach((item,i)=>{
+      const wrap=document.createElement('div');wrap.className='quiz-question';
+      const title=document.createElement('strong');title.textContent=(i+1)+'. '+item.q;wrap.appendChild(title);
+      item.a.forEach((option,j)=>{
+        const b=document.createElement('button');b.type='button';b.className='quiz-option'+(answers[i]===j?' selected':'');b.textContent=option;b.setAttribute('aria-pressed',answers[i]===j?'true':'false');
+        b.addEventListener('click',()=>{answers[i]=j;render();});wrap.appendChild(b);
+      });
+      host.appendChild(wrap);
+    });
+  }
+  document.getElementById('quizSubmit').addEventListener('click',()=>{
+    const done=answers.filter(x=>x!==-1).length;
+    if(done!==quizData.length){result.textContent='Pehle sabhi 5 sawaalon ke jawaab select karein.';return;}
+    let score=0;answers.forEach((a,i)=>{if(a===quizData[i].correct)score++;});
+    result.textContent='Aapka score: '+score+'/5. '+(score===5?'Shabash! Aapne sabhi scenarios sahi samjhe.':score>=3?'Achhi koshish! Neeche diye gaye explanations ko dobara padhein.':'Koi baat nahi—har scenario par sochkar dobara try karein.');
+    quizData.forEach((item,i)=>{const p=document.createElement('p');p.className='quiz-feedback';p.textContent=(i+1)+'. '+(answers[i]===item.correct?'Sahi. ':'Review. ')+item.why;host.appendChild(p);});
+  });
+  document.getElementById('quizReset').addEventListener('click',()=>{answers=Array(quizData.length).fill(-1);result.textContent='';render();});
+  render();
+})();
+</script>
+
+</body>
+</html>
