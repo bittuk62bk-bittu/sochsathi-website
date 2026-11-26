@@ -1,0 +1,61 @@
+name: Build SochSathi Pooja story video
+on:
+  push:
+    paths:
+      - 'scripts/sochsathi_story_generator.zlib.b64'
+      - '.github/workflows/build-pooja-video.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+
+jobs:
+  render-and-mix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install video dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-core ffmpeg fonts-dejavu-core
+          python -m pip install --quiet pillow
+      - name: Unpack verified SochSathi animation script
+        shell: bash
+        run: |
+          mkdir -p scripts media
+          python - <<'PY'
+          import zlib, base64
+          from pathlib import Path
+          content=Path('scripts/sochsathi_story_generator.zlib.b64').read_text().strip()
+          script=zlib.decompress(base64.b64decode(content))
+          compile(script,'scripts/build_story_video.py','exec')
+          Path('scripts/build_story_video.py').write_bytes(script)
+          print('Unpacked source:',len(script),'bytes')
+          PY
+      - name: Render six moving scenes
+        run: |
+          python scripts/build_story_video.py
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 /tmp/silent.mp4
+      - name: Download approved SochSathi Hindi narration
+        env:
+          VOICE_URL: https://resource2.heygen.ai/text_to_speech/2facdf58198e47979f185a62d3e7241b/0GiuqxlLjhkwADaSIDWH/id=f710c0d5697b4f0a9d5ec52b7e5537d3.wav
+        run: |
+          curl -fLsS --retry 3 --retry-delay 2 --connect-timeout 20 --max-time 120 "$VOICE_URL" -o /tmp/narration.wav
+          test "$(stat -c%s /tmp/narration.wav)" -gt 10000
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 /tmp/narration.wav
+      - name: Mix original Hindi voice into 9:16 MP4
+        run: |
+          ffmpeg -y -hide_banner -loglevel error -i /tmp/silent.mp4 -i /tmp/narration.wav -map 0:v:0 -map 1:a:0 -c:v copy -c:a aac -b:a 128k -ar 44100 -t 45.4 -movflags +faststart media/sochsathi-pooja-story.mp4
+          ffprobe -v error -show_entries stream=index,codec_type,codec_name -show_entries format=duration,size -of json media/sochsathi-pooja-story.mp4
+      - name: Store completed movie in SochSathi website
+        shell: bash
+        run: |
+          git config user.name "SochSathi Video Builder"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/sochsathi-pooja-story.mp4 media/pooja-story-cover.jpg
+          if ! git diff --cached --quiet; then
+            git commit -m "Add 45s Pooja AutoPay animation with approved Hindi voice"
+            git push origin HEAD:main
+          else
+            echo "Video already up to date"
+          fi
