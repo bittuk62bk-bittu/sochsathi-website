@@ -1,0 +1,392 @@
+{
+  "version": "1.0-draft",
+  "updated_on": "2026-11-26",
+  "purpose": "Source-backed diverse topic research queue. No content published and no backend connected.",
+  "publication_policy": {
+    "post_only_after_telegram_yes": true,
+    "do_not_name_or_accuse_private_people_or_brands": true,
+    "do_not_fabricate_evidence": true,
+    "do_not_shame_victims": true,
+    "disclose_ai_presenters": true,
+    "core_safety_info_free": true
+  },
+  "target_schedule": {
+    "timezone": "Asia/Kolkata",
+    "eligible_weekdays": [
+      "Monday",
+      "Tuesday",
+      "Thursday",
+      "Saturday",
+      "Sunday"
+    ],
+    "slots": [
+      "10:00",
+      "18:00"
+    ],
+    "status": "not_activated"
+  },
+  "video_model": {
+    "primary_explainer": "one researched 8–10 minute master episode per theme",
+    "reels": "5–10 independent short explainers per master; each stands alone",
+    "natural_voice_required": true,
+    "approval_before_publish": true
+  },
+  "presenters": [
+    {
+      "presenter_id": "SS-01",
+      "category": "binary",
+      "focus": "Binary Trading",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    },
+    {
+      "presenter_id": "SS-02",
+      "category": "gambling",
+      "focus": "Color Prediction & Betting",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    },
+    {
+      "presenter_id": "SS-03",
+      "category": "shopping",
+      "focus": "Shopping & Fashion",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    },
+    {
+      "presenter_id": "SS-04",
+      "category": "subscriptions",
+      "focus": "Trials & AutoPay",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    },
+    {
+      "presenter_id": "SS-05",
+      "category": "courses",
+      "focus": "Online Courses & AI Earnings",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    },
+    {
+      "presenter_id": "SS-06",
+      "category": "loans",
+      "focus": "Loan Apps",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    },
+    {
+      "presenter_id": "SS-07",
+      "category": "jobs",
+      "focus": "Job Offers",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    },
+    {
+      "presenter_id": "SS-08",
+      "category": "social",
+      "focus": "Social Media",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    },
+    {
+      "presenter_id": "SS-09",
+      "category": "safety",
+      "focus": "Cyber Safety",
+      "identity": "clearly labelled fictional AI presenter; no real-person impersonation"
+    }
+  ],
+  "topics": [
+    {
+      "id": "SS-T001",
+      "category": "binary",
+      "presenter_id": "SS-01",
+      "title": "Binary trading me loss chasing kaise hoti hai",
+      "angle": "psychology",
+      "evidence_to_collect": "loss cycle, source-backed risk guidance",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T002",
+      "category": "binary",
+      "presenter_id": "SS-01",
+      "title": "OTC me sure-shot signal ke daave",
+      "angle": "claims",
+      "evidence_to_collect": "guarantee language, independent verification",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T003",
+      "category": "binary",
+      "presenter_id": "SS-01",
+      "title": "Profit screenshot par bharosa kyun nahi",
+      "angle": "evidence",
+      "evidence_to_collect": "cherry-picked results and risk disclosures",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T004",
+      "category": "binary",
+      "presenter_id": "SS-01",
+      "title": "Trading referral commissions aur conflicts",
+      "angle": "incentives",
+      "evidence_to_collect": "disclosed affiliate structures where documented",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T005",
+      "category": "gambling",
+      "presenter_id": "SS-02",
+      "title": "Color prediction ki pehli chhoti jeet",
+      "angle": "psychology",
+      "evidence_to_collect": "variable reward evidence and limits",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T006",
+      "category": "gambling",
+      "presenter_id": "SS-02",
+      "title": "Har ke baad double lagane ki galti",
+      "angle": "psychology",
+      "evidence_to_collect": "loss chasing and compounding losses",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T007",
+      "category": "gambling",
+      "presenter_id": "SS-02",
+      "title": "Betting group ke pressure tactics",
+      "angle": "persuasion",
+      "evidence_to_collect": "credible reporting and risk warnings",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T008",
+      "category": "gambling",
+      "presenter_id": "SS-02",
+      "title": "Free tip se VIP tip ka safar",
+      "angle": "upsell",
+      "evidence_to_collect": "documented promotional funnels without naming private actors",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T009",
+      "category": "shopping",
+      "presenter_id": "SS-03",
+      "title": "Sasta suit aur asli kapde ka farq",
+      "angle": "product",
+      "evidence_to_collect": "fabric quality, picture limitations, refund terms",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T010",
+      "category": "shopping",
+      "presenter_id": "SS-03",
+      "title": "Fake sale countdown ka effect",
+      "angle": "urgency",
+      "evidence_to_collect": "marketing examples verified and anonymized",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T011",
+      "category": "shopping",
+      "presenter_id": "SS-03",
+      "title": "Prepaid order aur delivery evidence",
+      "angle": "consumer-rights",
+      "evidence_to_collect": "safe evidence preservation and complaint steps",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T012",
+      "category": "shopping",
+      "presenter_id": "SS-03",
+      "title": "Return ke naam par QR scam",
+      "angle": "payments",
+      "evidence_to_collect": "official UPI fraud awareness guidance",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T013",
+      "category": "subscriptions",
+      "presenter_id": "SS-04",
+      "title": "₹1 trial ke baad ₹599 charge ka risk",
+      "angle": "billing",
+      "evidence_to_collect": "clear renewal terms and sample disclosed subscription screens",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T014",
+      "category": "subscriptions",
+      "presenter_id": "SS-04",
+      "title": "UPI AutoPay mandate check kaise karein",
+      "angle": "practical",
+      "evidence_to_collect": "official bank/UPI guidance",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T015",
+      "category": "subscriptions",
+      "presenter_id": "SS-04",
+      "title": "5 chhoti subscriptions ka mahine ka total",
+      "angle": "budget",
+      "evidence_to_collect": "transparent example arithmetic, no invented victims",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T016",
+      "category": "subscriptions",
+      "presenter_id": "SS-04",
+      "title": "Cancel karne ka rasta chhupa ho to",
+      "angle": "consumer-rights",
+      "evidence_to_collect": "merchant and bank cancellation steps",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T017",
+      "category": "courses",
+      "presenter_id": "SS-05",
+      "title": "₹9 class se ₹3500 bundle ka funnel",
+      "angle": "upsell",
+      "evidence_to_collect": "illustrative amounts only; disclaim examples",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T018",
+      "category": "courses",
+      "presenter_id": "SS-05",
+      "title": "AI se guaranteed earning ka claim",
+      "angle": "claims",
+      "evidence_to_collect": "independent proof and disclosure checks",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T019",
+      "category": "courses",
+      "presenter_id": "SS-05",
+      "title": "Fake scarcity: sirf 10 seats bachi",
+      "angle": "urgency",
+      "evidence_to_collect": "sales psychology research, non-accusatory",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T020",
+      "category": "courses",
+      "presenter_id": "SS-05",
+      "title": "Paid course vs free learning sources",
+      "angle": "comparison",
+      "evidence_to_collect": "verified free educational resources",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T021",
+      "category": "loans",
+      "presenter_id": "SS-06",
+      "title": "Instant loan app permission trap",
+      "angle": "privacy",
+      "evidence_to_collect": "official cyber advisory and permissions",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T022",
+      "category": "loans",
+      "presenter_id": "SS-06",
+      "title": "Advance fee loan offer ka red flag",
+      "angle": "payment",
+      "evidence_to_collect": "official lending consumer guidance",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T023",
+      "category": "loans",
+      "presenter_id": "SS-06",
+      "title": "Loan recovery threats aur practical next steps",
+      "angle": "safety",
+      "evidence_to_collect": "credible victim support channels",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T024",
+      "category": "jobs",
+      "presenter_id": "SS-07",
+      "title": "Work-from-home registration fee trick",
+      "angle": "payment",
+      "evidence_to_collect": "official fake job warning guidance",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T025",
+      "category": "jobs",
+      "presenter_id": "SS-07",
+      "title": "Fake joining letter ko kaise verify karein",
+      "angle": "verification",
+      "evidence_to_collect": "official employer verification practices",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T026",
+      "category": "social",
+      "presenter_id": "SS-08",
+      "title": "Duplicate account se dost bankar message",
+      "angle": "impersonation",
+      "evidence_to_collect": "official social safety advisories",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T027",
+      "category": "social",
+      "presenter_id": "SS-08",
+      "title": "Celebrity voice/video endorsement par shak",
+      "angle": "deepfake",
+      "evidence_to_collect": "official AI-generated misinformation guidance",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T028",
+      "category": "safety",
+      "presenter_id": "SS-09",
+      "title": "Digital arrest ka psychological pressure",
+      "angle": "fear",
+      "evidence_to_collect": "official police and government advisory",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T029",
+      "category": "safety",
+      "presenter_id": "SS-09",
+      "title": "Sextortion ke dar ko leverage karna",
+      "angle": "coercion",
+      "evidence_to_collect": "official reporting and evidence preservation",
+      "status": "research_needed",
+      "last_used": null
+    },
+    {
+      "id": "SS-T030",
+      "category": "safety",
+      "presenter_id": "SS-09",
+      "title": "Lottery prize parcel delivery fee trick",
+      "angle": "advance-fee",
+      "evidence_to_collect": "official cyber reporting advisories",
+      "status": "research_needed",
+      "last_used": null
+    }
+  ]
+}
